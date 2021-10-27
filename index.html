@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+
+    Author: Kamil Urbanowski  
+    Nick: EskamXD
+
+-->
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemy liczbowe</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="border">
+        <div id="form" class="padding20">
+            <form action="">
+                Wybierz z jakiego systemu chcesz przeliczyć:
+                <br>
+                <input list="system_in" placeholder="Kliknij dwukrotnie by wybrać system liczbowy" style="width: 300px;" id="system_in_input" class="input">
+                <datalist id="system_in">
+                    <option value="2">2 - Dwójkowy</option>
+                    <option value="3">3 - Trójkowy</option>
+                    <option value="4">4 - Czwórkowy</option>
+                    <option value="5">5 - Piątkowy</option>
+                    <option value="6">6 - Szóstkowy</option>
+                    <option value="7">7 - Siódemkowy</option>
+                    <option value="8">8 - Ósemkowy</option>
+                    <option value="9">9 - Dziewiątkowy</option>
+                    <option value="10">10 - Dziesiątkowy</option>
+                    <option value="11">11 - Jedenastkowy</option>
+                    <option value="12">12 - Dwunastkowy</option>
+                    <option value="13">13 - Trzynastkowy</option>
+                    <option value="14">14 - Czternastokowy</option>
+                    <option value="15">15 - Piętnastkowy</option>
+                    <option value="16">16 - Szesnastkowy</option>n>
+                </datalist>
+                <br>
+                Wybierz na jaki system chcesz przeliczyć:
+                <br>
+                <input list="system_out" placeholder="Kliknij dwukrotnie by wybrać system liczbowy" style="width: 300px;" id="system_out_input" class="input">
+                <datalist id="system_out">
+                    <option value="2">2 - Dwójkowy</option>
+                    <option value="3">3 - Trójkowy</option>
+                    <option value="4">4 - Czwórkowy</option>
+                    <option value="5">5 - Piątkowy</option>
+                    <option value="6">6 - Szóstkowy</option>
+                    <option value="7">7 - Siódemkowy</option>
+                    <option value="8">8 - Ósemkowy</option>
+                    <option value="9">9 - Dziewiątkowy</option>
+                    <option value="10">10 - Dziesiątkowy</option>
+                    <option value="11">11 - Jedenastkowy</option>
+                    <option value="12">12 - Dwunastkowy</option>
+                    <option value="13">13 - Trzynastkowy</option>
+                    <option value="14">14 - Czternastokowy</option>
+                    <option value="15">15 - Piętnastkowy</option>
+                    <option value="16">16 - Szesnastkowy</option>
+                </datalist>
+                <br>
+                Wybierz maksymalny przedział generowanej liczby [10;1000]:
+                <br>
+                <input type="number" name="" id="range" placeholder="[10;1000]" min="10" max="1000" class="input">
+                <br>
+                <input type="button" value="Generuj" id="submit" class="submit" onclick="fun('gen')">
+            </form>
+        </div>
+        <div class="line"></div>
+        <div id="generated_number" class="padding20" style="height: 30px;">
+
+        </div>
+        <div class="line"></div>
+        <div id="result" class="padding20">
+            <input type="text" name="" id="user_answer" class="submit" style="text-transform:uppercase">
+            <input type="submit" value="Sprawdź" id="check_btn" class="input" onclick="fun('che')">
+        </div>
+        <div id="final_result" style="height: 30px;">
+
+        </div>
+    </div>
+</body>
+<script src="js.js"></script>
+</html>
