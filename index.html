@@ -19,7 +19,7 @@
             <form action="">
                 Wybierz z jakiego systemu chcesz przeliczyć:
                 <br>
-                <input list="system_in" placeholder="Kliknij dwukrotnie by wybrać system liczbowy" style="min-width: 40%; max-width: 60%;" id="system_in_input" class="input">
+                <input list="system_in" placeholder="Kliknij dwukrotnie by wybrać system liczbowy" style="min-width: 40%; max-width: 60%;" id="system_in_input" class="input height20">
                 <datalist id="system_in">
                     <option value="2">2 - Dwójkowy</option>
                     <option value="3">3 - Trójkowy</option>
@@ -40,7 +40,7 @@
                 <br>
                 Wybierz na jaki system chcesz przeliczyć:
                 <br>
-                <input list="system_out" placeholder="Kliknij dwukrotnie by wybrać system liczbowy" style="min-width: 40%; max-width: 60%;" id="system_out_input" class="input">
+                <input list="system_out" placeholder="Kliknij dwukrotnie by wybrać system liczbowy" style="min-width: 40%; max-width: 60%;" id="system_out_input" class="input height20">
                 <datalist id="system_out">
                     <option value="2">2 - Dwójkowy</option>
                     <option value="3">3 - Trójkowy</option>
@@ -61,9 +61,9 @@
                 <br>
                 Wybierz maksymalny przedział generowanej liczby [10;1000]:
                 <br>
-                <input type="number" name="" id="range" placeholder="[10;1000]" min="10" max="1000" class="input">
+                <input type="number" name="" id="range" placeholder="[10;1000]" min="10" max="1000" class="input height20">
                 <br>
-                <input type="button" value="Generuj" id="submit" class="submit" onclick="fun('gen')">
+                <input type="button" value="Generuj" id="submit" class="submit height20" onclick="fun('gen')">
             </form>
         </div>
         <div class="line"></div>
@@ -72,8 +72,8 @@
         </div>
         <div class="line"></div>
         <div id="result" class="padding20">
-            <input type="text" name="" id="user_answer" class="submit" style="text-transform:uppercase">
-            <input type="submit" value="Sprawdź" id="check_btn" class="input" onclick="fun('che')">
+            <input type="text" name="" id="user_answer" class="submit height20" style="text-transform:uppercase">
+            <input type="submit" value="Sprawdź" id="check_btn" class="input height20" onclick="fun('che')">
         </div>
         <div id="final_result" style="height: 30px;">
 
