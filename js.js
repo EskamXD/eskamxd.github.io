@@ -1,94 +1,91 @@
-var random_global
+function euklides() {
+    document.getElementById("euklides_wynik").innerHTML = ``;
+    var x = document.getElementById("euklides_x").value;
+    var y = document.getElementById("euklides_y").value;
 
-function fun(operation)
-{
-    var global = ''
-    //var random_global
+    var i = 1;
+    if (x % y == 0) {
+        document.getElementById("euklides_wynik").innerHTML = `(${i}) ${x}= ${parseInt(x / y)} * ${y} + ${(x % y)}`;
+    } else {
+        while (x % y != 0) {
+            var xStare = x;
+            var yStare = y;
+            y = x % yStare;
+            x = yStare;
+            document.getElementById("euklides_wynik").innerHTML += `(${i}) ${xStare} = ${parseInt(xStare / yStare)} * ${yStare} + ${(xStare % yStare)}<br>`;
+            i++;
+        }
+    }
+    document.getElementById("euklides_wynik").innerHTML += `<br>wynik: ${y}`;
+    return y;
+}
 
-    if (operation === 'gen')
-    {
-        document.getElementById('final_result').innerHTML = ""
-        document.getElementById('user_answer').value = ""
-        let x = document.getElementById('system_in_input').value
-        let y = document.getElementById('system_out_input').value
-        let range = document.getElementById('range').value
 
-        if (range >= 10 && range <= 1000)
-        {
-            let array = new Array
-            let i = 0
-            let random = Math.floor(Math.random() * (range - 9) + 10)
-            random_global = random
-            //console.log(random)
-            do
-            {
-                array[i] = random % x
-                random = Math.floor(random/x)
-                i++
-            } while (random > 0)
-            //console.table(array)
 
-            for(let j = array.length-1; j >= 0; j--)
-            {
-                
-                if (array[j] > 9)
-                {
-                    global += String.fromCharCode(array[j] + 55)
+function rozszerzonyEuklides(x, y) {
+    document.getElementById("rozszerzonyEuklides_wynik").innerHTML = "";
+    const [nwd, r, s, i] = rozszerzonyEklidesRekurencja(x, y);
+    document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `<br>[${nwd}, ${r}, ${s}]<br> ${s}*${y} + ${r}*${x} = ${nwd}`;
+    return;
+}
+
+function rozszerzonyEklidesRekurencja(x, y) {
+    if (x % y == 0) {
+        //document.getElementById("rozszerzonyEuklides_wynik").innerHTML = `(${i}) ${x}= ${parseInt(x / y)} * ${y} + ${(x % y)}`;
+        return [y, 0, 1, 1]
+    } else {
+        var q = parseInt(x / y);
+        const [nwd, r, s, i] = rozszerzonyEklidesRekurencja(y, x % y);
+        // console.log(`${nwd}, ${r}, ${s}, ${q}, ${x}, ${y}`);
+        document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `(${i}) ${r-q*s}*${y} + ${s}*${x}<br>`;
+        return [nwd, s, r - q * s, i + 1];
+    }
+
+}
+
+
+function sito(n) {
+    document.getElementById("sito_wynik").innerHTML = "";
+    var skr = [],
+        i,
+        j;
+    if (n < 2)
+        document.getElementById("sito_wynik").innerHTML += `Brak liczb pierwszych w podanym zakresie`;
+    else {
+        for (i = 2; i <= n; i++) skr[i] = false;
+        i = 2;
+        do {
+            if (!skr[i]) {
+                j = i * i;
+                while (j <= n) {
+                    skr[j] = true;
+                    j += i;
                 }
-                else global += array[j]
             }
-            document.getElementById('generated_number').innerHTML = global
+            i++;
+        } while (i * i <= n);
+        for (i = 2; i <= n; i++)
+            if (!skr[i]) document.getElementById("sito_wynik").innerHTML += `${i}, `;
+    }
+}
+
+function nwd(x, y) {
+    //console.log("nww");
+    if (x % y == 0) {
+        return y;
+    } else {
+        while (x % y != 0) {
+            var xStare = x;
+            var yStare = y;
+            y = x % yStare;
+            x = yStare;
         }
     }
-    if (operation ==='che')
-    {
-        let y = document.getElementById('system_out_input').value
-        //console.log(y)
+    return y;
+}
 
-        let holder = document.getElementById('user_answer').value
-        let chars = holder.split('')
-        let array = new Array
-        let array_compare = new Array
-        //console.table(chars)
-
-        for (let j = 0; j < chars.length ; j++)
-        {
-            if (chars[j].charCodeAt(0) >= 65 && chars[j].charCodeAt(0) <= 70) array[j] = chars[j].charCodeAt(0) - 55
-            else array[j] = chars[j].charCodeAt(0) - 48
-        }
-        array.reverse()
-        //console.table(array)
-        let i = 0
-        var random = random_global
-        //var random = document.getElementById('generated_number').value
-        //console.log(random)
-        do
-        {
-            //console.log(i)
-            array_compare[i] = random % y
-            random = Math.floor(random/y)
-            i++
-        } while (random > 0)
-
-        //console.table(array_compare)
-
-        let k = 0
-        if (array.length < array_compare.length) k = array.length
-        else k = array_compare.length
-
-        var bool = true
-        for (let j = 0; j < k ; j++)
-        {
-            //console.log('for')
-            //console.log(array_compare[j]+' '+array[j])
-            if (array_compare[j] != array[j])
-            {
-                //console.log(array_compare[j]+'true')
-                bool = false
-            }
-        }
-
-        if (bool == true) document.getElementById('final_result').innerHTML = "Dobrze"
-        else document.getElementById('final_result').innerHTML = "Źle"
-    }
+function nww(a, b) {
+    document.getElementById("nww_wynik").innerHTML = ``;
+    var wynik = a * b / nwd(a, b);
+    document.getElementById("nww_wynik").innerHTML += `${wynik}`;
 }
