@@ -1,7 +1,6 @@
-function euklides() {
+function euklides(x, y) {
     document.getElementById("euklides_wynik").innerHTML = ``;
-    var x = document.getElementById("euklides_x").value;
-    var y = document.getElementById("euklides_y").value;
+
 
     var i = 1;
     if (x % y == 0) {
@@ -88,4 +87,24 @@ function nww(a, b) {
     document.getElementById("nww_wynik").innerHTML = ``;
     var wynik = a * b / nwd(a, b);
     document.getElementById("nww_wynik").innerHTML += `${wynik}`;
+}
+
+function chinczyk(a1, a2, a3, b1, b2, b3)
+{
+    console.log(b3)
+    var n1 = 1, n2 = 1, n3 = 1
+    if(a3 == null || b3 == null)
+        a3 = b3 = 1
+    console.log(b3)
+    document.getElementById("chinczyk_wynik").innerHTML = ``
+    n1 = b2*b3, n2 = b1*b3, n3 = b1*b2
+    document.getElementById("chinczyk_wynik").innerHTML += `(N1) = ${b2} * ${b3} = ${n1} <br>`
+    document.getElementById("chinczyk_wynik").innerHTML += `(N2) = ${b1} * ${b3} = ${n2} <br>`
+    document.getElementById("chinczyk_wynik").innerHTML += `(N3) = ${b1} * ${b2} = ${n3} <br>`
+    const [nwd1, r1, s1] = rozszerzonyEklidesRekurencja(n1, b1), [nwd2, r2, s2] = rozszerzonyEklidesRekurencja(n2, b2), [nwd3, r3, s3] = rozszerzonyEklidesRekurencja(n3, b3)
+    var a = (n1*a1*r1+n2*a2*r2+n3*a3*r3)
+    var b = (b1*b2*b3)
+    document.getElementById("chinczyk_wynik").innerHTML += `Elementy odwrotne (N1) = ${r1}, (N2) = ${r2}, (N3) = ${r3}<br>`
+    document.getElementById("chinczyk_wynik").innerHTML += `a = ${n1} * ${a1} * ${r1} + ${n2} * ${a2} * ${r2} + ${n3} * ${a3} * ${r3}<br>`
+    document.getElementById("chinczyk_wynik").innerHTML += `x = ${a} mod ${b}`
 }
