@@ -75,9 +75,15 @@
                 onclick="chinczyk(document.getElementById('chinczyk_a1').value, document.getElementById('chinczyk_a2').value, document.getElementById('chinczyk_a3').value, document.getElementById('chinczyk_b1').value, document.getElementById('chinczyk_b2').value, document.getElementById('chinczyk_b3').value)"
                 style="font-weight: bold;"><br>
             <div class="block" id="chinczyk_wynik" style="height: auto; border: 0;"></div>
-        </div <div class="div7 block" id="div7">
-
-    </div>
+        </div>
+        <div class="div7 block" id="div7">
+            <h3>Eulera</h3>
+            <input class="input" type="number" name="n" id="euler_n" placeholder="n"><br>
+            <input class="input" type="button" value="Licz" onclick="euler(document.getElementById('euler_n').value)"
+                style="font-weight: bold;"><br>
+            <div class="block" id="euler_wynik" style="height: auto; border: 0;">
+            </div>
+        </div>
     </div>
 </body>
 <script src="js.js"></script>

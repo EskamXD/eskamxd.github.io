@@ -108,3 +108,19 @@ function chinczyk(a1, a2, a3, b1, b2, b3)
     document.getElementById("chinczyk_wynik").innerHTML += `a = ${n1} * ${a1} * ${r1} + ${n2} * ${a2} * ${r2} + ${n3} * ${a3} * ${r3}<br>`
     document.getElementById("chinczyk_wynik").innerHTML += `x = ${a} mod ${b}`
 }
+
+function euler(n) 
+{ 
+    document.getElementById("euler_wynik").innerHTML = ``
+    var wynik = 0
+    for(var i=1; i < n; ++i)
+    {
+        sprawdz = nwd(i, n);
+        if (sprawdz == 1)
+        {
+            document.getElementById("euler_wynik").innerHTML += `nwd: ${sprawdz}(${i}, ${n}), `
+            ++wynik; 
+        }
+    } 
+    document.getElementById("euler_wynik").innerHTML += `<br>wynik: ${wynik}`
+}
