@@ -118,7 +118,7 @@ function euler(n)
         sprawdz = nwd(i, n);
         if (sprawdz == 1)
         {
-            document.getElementById("euler_wynik").innerHTML += `nwd: ${sprawdz}(${i}, ${n}), `
+            //document.getElementById("euler_wynik").innerHTML += `nwd: ${sprawdz}(${i}, ${n}), `
             ++wynik; 
         }
     } 
