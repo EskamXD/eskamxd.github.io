@@ -28,7 +28,7 @@ function rozszerzonyEuklides(x, y, c) {
     if(c%nwd == 0)
     {
         var n = c/nwd
-        document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `<br>{x = ${r*n} + t*(${b/nwd})<br>{y = ${s*n} - t*(${a/nwd})`;
+        document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `<br>{x = ${r*n} + t*(${y/nwd})<br>{y = ${s*n} - t*(${x/nwd})`;
     }
     return;
 }
