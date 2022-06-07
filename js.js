@@ -21,10 +21,15 @@ function euklides(x, y) {
 
 
 
-function rozszerzonyEuklides(x, y) {
+function rozszerzonyEuklides(x, y, c) {
     document.getElementById("rozszerzonyEuklides_wynik").innerHTML = "";
     const [nwd, r, s, i] = rozszerzonyEklidesRekurencja(x, y);
     document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `<br>[${nwd}, ${r}, ${s}]<br> ${s}*${y} + ${r}*${x} = ${nwd}`;
+    if(c%nwd == 0)
+    {
+        var n = c/nwd
+        document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `<br>{x = ${r*n} + t*(${b/nwd})<br>{y = ${s*n} - t*(${a/nwd})`;
+    }
     return;
 }
 
