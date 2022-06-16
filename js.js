@@ -40,7 +40,7 @@ function rozszerzonyEklidesRekurencja(x, y) {
     } else {
         var q = parseInt(x / y);
         const [nwd, r, s, i] = rozszerzonyEklidesRekurencja(y, x % y);
-        // console.log(`${nwd}, ${r}, ${s}, ${q}, ${x}, ${y}`);
+        console.log(`${nwd}, ${r}, ${s}, ${q}, ${x}, ${y}`);
         document.getElementById("rozszerzonyEuklides_wynik").innerHTML += `(${i}) ${r-q*s}*${y} + ${s}*${x}<br>`;
         return [nwd, s, r - q * s, i + 1];
     }
@@ -73,7 +73,7 @@ function sito(n) {
     }
 }
 
-function nwd(x, y) {
+function nwdFunction(x, y) {
     //console.log("nww");
     if (x % y == 0) {
         return y;
@@ -90,7 +90,7 @@ function nwd(x, y) {
 
 function nww(a, b) {
     document.getElementById("nww_wynik").innerHTML = ``;
-    var wynik = a * b / nwd(a, b);
+    var wynik = a * b / nwdFunction(a, b);
     document.getElementById("nww_wynik").innerHTML += `${wynik}`;
 }
 
@@ -120,7 +120,7 @@ function euler(n)
     var wynik = 0
     for(var i=1; i < n; ++i)
     {
-        sprawdz = nwd(i, n);
+        sprawdz = nwdFunction(i, n);
         if (sprawdz == 1)
         {
             //document.getElementById("euler_wynik").innerHTML += `nwd: ${sprawdz}(${i}, ${n}), `
@@ -128,4 +128,117 @@ function euler(n)
         }
     } 
     document.getElementById("euler_wynik").innerHTML += `<br>wynik: ${wynik}`
+}
+
+function expModulo(a, b, c)
+{
+    document.getElementById("expModulo_wynik").innerHTML = ``
+    if (b == 1)
+        document.getElementById("expModulo_wynik").innerHTML += `wynik: ${a%c}`
+    else
+    {
+        var power = 1, i = 0
+        var arr = new Array()
+        while(power < b)
+        {
+            arr.push(power) 
+            power *= 2
+            i++
+        }
+        console.table(arr)
+
+        // for(let j = 0; j < i; j++)
+        //     document.getElementById("expModulo_wynik").innerHTML += `${a}^${arr[j]} mod ${c} = ${Math.pow(a, arr[j])%c}<br>`
+  
+        
+        var holder = b
+        var arr2 = new Array()
+        for(let j = i-1; j >= 0; j--)
+        {
+            if(holder >= arr[j])
+            {
+                holder -= arr[j]
+                arr2.push(arr[j])
+            }
+            else
+            {
+                arr2.push(-1)
+            }
+        }
+        console.table(arr2)
+        arr2.reverse()
+        console.table(arr2)
+
+        var holder = parseInt(a), sum = 1
+        for(let j = 0; j < i; j++)
+        {
+            if(arr[j] == 1)
+            {
+                document.getElementById("expModulo_wynik").innerHTML += `${a}^${arr[j]} mod ${c} = ${holder}<br>`
+                sum *= holder
+                console.log(`${holder}, ${sum}`)
+            }
+            else
+            {
+                document.getElementById("expModulo_wynik").innerHTML += `${a}^${arr[j]} mod ${c} = ${holder}*${holder} mod ${c} = ${holder*holder} mod ${c} = ${holder*holder%c} <br>`
+                holder = holder*holder%c
+                if(arr[j] == arr2[j])
+                {
+                    sum *= holder
+                    console.log(`${holder}, ${sum}`)
+                }
+            }
+        }
+        for(let j = 0; j < i; j++)
+        {
+            if(arr[j] == arr2[j])
+                document.getElementById("expModulo_wynik").innerHTML += `* ${a}^${arr2[j]}`
+
+        }
+        document.getElementById("expModulo_wynik").innerHTML += ` = ${sum}<br>`
+        //if(sum > c)
+        document.getElementById("expModulo_wynik").innerHTML += `${sum} mod ${c} = ${sum%c}<br>`
+    }
+}
+
+function rsa(p, q, m)
+{
+    document.getElementById("rsa_wynik").innerHTML = ``
+    var n = p*q
+    var phi = (p-1)*(q-1)
+    var bool = false
+    while(!bool)
+    {
+        console.log("while")
+        var e = Math.round(Math.random()*(n-2)+2)
+        if(nwdFunction(e, phi) == 1 /*&& e%(p-1) != 0 && e%(q-1) != 0*/)
+            bool = true
+    }
+    document.getElementById("rsa_wynik").innerHTML += `e = ${e}`
+    const [rsanwd, dconst, rsas, rsai] = rozszerzonyEklidesRekurencja(e, phi);
+    var d = dconst
+    if(d < 0)
+        d += phi
+    document.getElementById("rsa_wynik").innerHTML += `, d = ${d}<br>klucz publiczny(${e}, ${n}), klucz prywatny(${d}, ${n})<br>`
+    var cSzyfrowane = Math.pow(m, e)%n
+    expModulo(m, e, n)
+    var cDeszyfrowane = Math.pow(cSzyfrowane, d)%n
+    document.getElementById("rsa_wynik").innerHTML += `Po zaszyfrowaniu c = ${cSzyfrowane} oraz po zdeszyfrowaniu ${cDeszyfrowane}`
+}
+
+function Ersa(p, q, m, e)
+{
+    document.getElementById("Ersa_wynik").innerHTML = ``
+    var n = p*q
+    var phi = (p-1)*(q-1)
+    // document.getElementById("rsa_wynik").innerHTML += `e = ${e}`
+    const [ersanwd, dconst, ersas, ersai] = rozszerzonyEklidesRekurencja(e, phi);
+    var d = dconst
+    if(d < 0)
+        d += phi
+    document.getElementById("Ersa_wynik").innerHTML += `d = ${d}<br>klucz publiczny(${e}, ${n}), klucz prywatny(${d}, ${n})<br>`
+    var cSzyfrowane = Math.pow(m, e)%n
+    expModulo(m, e, n)
+    var cDeszyfrowane = Math.pow(cSzyfrowane, d)%n
+    document.getElementById("Ersa_wynik").innerHTML += `Po zaszyfrowaniu c = ${cSzyfrowane} oraz po zdeszyfrowaniu ${cDeszyfrowane}`
 }

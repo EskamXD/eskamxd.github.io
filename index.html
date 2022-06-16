@@ -19,6 +19,9 @@
                 <li><a href="#div5">NWW</a></li>
                 <li><a href="#div6">Chiński algorytm</a></li>
                 <li><a href="#div7">Euler</a></li>
+                <li><a href="#div8">Modulo / Ekspotenjalne modulo</a></li>
+                <li><a href="#div9">RSA</a></li>
+                <li><a href="#div10">RSA z publicznym kluczem e</a></li>
             </ul>
         </div>
         <div class="div2 block" id="div2">
@@ -83,6 +86,40 @@
             <input class="input" type="button" value="Licz" onclick="euler(document.getElementById('euler_n').value)"
                 style="font-weight: bold;"><br>
             <div class="block" id="euler_wynik" style="height: auto; border: 0;">
+            </div>
+        </div>
+        <div class="div8 block" id="div8">
+            <h3>Modulo / Ekspotenjalne modulo</h3>
+            <input class="input" type="number" name="n" id="expMod_a" placeholder="a"><br>
+            <input class="input" type="number" name="b" id="expMod_b" placeholder="b" value="1"><br>
+            <input class="input" type="number" name="c" id="expMod_c" placeholder="c"><br>
+            <input class="input" type="button" value="Licz"
+                onclick="expModulo(document.getElementById('expMod_a').value, document.getElementById('expMod_b').value, document.getElementById('expMod_c').value)"
+                style="font-weight: bold;"><br>
+            <div class="block" id="expModulo_wynik" style="height: auto; border: 0;">
+            </div>
+        </div>
+        <div class="div9 block" id="div9">
+            <h3>RSA</h3>
+            <input class="input" type="number" name="n" id="rsa_p" placeholder="p"><br>
+            <input class="input" type="number" name="n" id="rsa_q" placeholder="q"><br>
+            <input class="input" type="number" name="n" id="rsa_m" placeholder="m"><br>
+            <input class="input" type="button" value="Licz"
+                onclick="rsa(document.getElementById('rsa_p').value, document.getElementById('rsa_q').value, document.getElementById('rsa_m').value)"
+                style="font-weight: bold;"><br>
+            <div class="block" id="rsa_wynik" style="height: auto; border: 0;">
+            </div>
+        </div>
+        <div class="div10 block" id="div10">
+            <h3>RSA z kluczem publicznym e</h3>
+            <input class="input" type="number" name="n" id="Ersa_p" placeholder="p"><br>
+            <input class="input" type="number" name="n" id="Ersa_q" placeholder="q"><br>
+            <input class="input" type="number" name="n" id="Ersa_m" placeholder="m"><br>
+            <input class="input" type="number" name="n" id="Ersa_e" placeholder="e"><br>
+            <input class="input" type="button" value="Licz"
+                onclick="Ersa(document.getElementById('Ersa_p').value, document.getElementById('Ersa_q').value, document.getElementById('Ersa_m').value, document.getElementById('Ersa_e').value)"
+                style="font-weight: bold;"><br>
+            <div class="block" id="Ersa_wynik" style="height: auto; border: 0;">
             </div>
         </div>
     </div>
