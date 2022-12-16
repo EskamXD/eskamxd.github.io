@@ -1,129 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algortymy na dyskretną</title>
+    <title>Pokój 315</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <div class="parent">
-        <div class="div1 block">
-            <ul>
-                <li><a href="#div2">Algorytm Euklidesa</a></li>
-                <li><a href="#div3">Rozszerzony algorytm euklidesa</a></li>
-                <li><a href="#div4">Sito Erastotenesa</a></li>
-                <li><a href="#div5">NWW</a></li>
-                <li><a href="#div6">Chiński algorytm</a></li>
-                <li><a href="#div7">Euler</a></li>
-                <li><a href="#div8">Modulo / Ekspotenjalne modulo</a></li>
-                <li><a href="#div9">RSA</a></li>
-                <li><a href="#div10">RSA z publicznym kluczem e</a></li>
-            </ul>
-        </div>
-        <div class="div2 block" id="div2">
-            <h3>Algorytm Euklidesa</h3>
-            <h4>NWD</h4>
-            <input class="input" type="number" name="x" id="euklides_x" placeholder="x"><br>
-            <input class="input" type="number" name="y" id="euklides_y" placeholder="y"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="euklides(document.getElementById('euklides_x').value, document.getElementById('euklides_y').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="euklides_wynik" style="height: auto; border: 0;"></div>
-        </div>
-        <div class="div3 block" id="div3">
-            <h3>Rozszerzony algorytm Euklidesa</h3>
-            <input class="input" type="number" name="x" id="rozszerzonyEuklides_x" placeholder="x"><br>
-            <input class="input" type="number" name="y" id="rozszerzonyEuklides_y" placeholder="y"><br>
-            <input class="input" type="number" name="y" id="rozszerzonyEuklides_c" placeholder="y"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="rozszerzonyEuklides(document.getElementById('rozszerzonyEuklides_x').value, document.getElementById('rozszerzonyEuklides_y').value, document.getElementById('rozszerzonyEuklides_c').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="rozszerzonyEuklides_wynik" style="height: auto; border: 0;"></div>
-        </div>
-        <div class="div4 block" id="div4">
-            <h3>Sito Erastotenesa</h3>
-            <input class="input" type="number" name="zakres" id="sito_x" placeholder="Koniec zakresu"><br>
-            <input class="input" type="button" value="Licz" onclick="sito(document.getElementById('sito_x').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="sito_wynik" style="height: auto; border: 0;"></div>
-        </div>
-        <div class="div5 block" id="div5">
-            <h3>NWW (Największa wspólna wielokrotność)</h3>
-            <h4>NWW = (a*b)/NWD(a,b)</h4>
-            <input class="input" type="number" name="x" id="a" placeholder="x"><br>
-            <input class="input" type="number" name="y" id="b" placeholder="y"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="nww(document.getElementById('a').value, document.getElementById('b').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="nww_wynik" style="height: auto; border: 0;"></div>
-        </div>
-        <div class="div6 block" id="div6">
-            <h3>Chiński algorytm</h3>
-            <input class="input" type="number" name="zakres" id="chinczyk_a1" placeholder="a1"
-                style="width: 100px; display: inline;"> mod
-            <input class="input" type="number" name="zakres" id="chinczyk_b1" placeholder="b1"
-                style="width: 100px; display: inline;"><br>
-            <input class="input" type="number" name="zakres" id="chinczyk_a2" placeholder="a2"
-                style="width: 100px; display: inline;"> mod
-            <input class="input" type="number" name="zakres" id="chinczyk_b2" placeholder="b2"
-                style="width: 100px; display: inline;"><br>
-            <input class="input" type="number" name="zakres" id="chinczyk_a3" placeholder="a3"
-                style="width: 100px; display: inline;"> mod
-            <input class="input" type="number" name="zakres" id="chinczyk_b3" placeholder="b3"
-                style="width: 100px; display: inline;"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="chinczyk(document.getElementById('chinczyk_a1').value, document.getElementById('chinczyk_a2').value, document.getElementById('chinczyk_a3').value, document.getElementById('chinczyk_b1').value, document.getElementById('chinczyk_b2').value, document.getElementById('chinczyk_b3').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="chinczyk_wynik" style="height: auto; border: 0;"></div>
-        </div>
-        <div class="div7 block" id="div7">
-            <h3>Eulera</h3>
-            <input class="input" type="number" name="n" id="euler_n" placeholder="n"><br>
-            <input class="input" type="button" value="Licz" onclick="euler(document.getElementById('euler_n').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="euler_wynik" style="height: auto; border: 0;">
+    <main>
+        <div class="parent">
+            <div class="div1 divMobile">
+                <h1 style="font-family: 'Dancing Script', cursive; font-size: xx-large;">Tu zaczyna się dobra kawa...
+                </h1>
+                <h3 style="font-family: 'Roboto', sans-serif;">Kawusia studencka - 2.50 zł</h2>
+                    <ul style="font-family: 'Roboto', sans-serif;">
+                        <li>Czarna</li>
+                        <li>Biała</li>
+                        <li>Latte</li>
+                    </ul>
+
             </div>
-        </div>
-        <div class="div8 block" id="div8">
-            <h3>Modulo / Ekspotenjalne modulo</h3>
-            <input class="input" type="number" name="n" id="expMod_a" placeholder="a"><br>
-            <input class="input" type="number" name="b" id="expMod_b" placeholder="b" value="1"><br>
-            <input class="input" type="number" name="c" id="expMod_c" placeholder="c"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="expModulo(document.getElementById('expMod_a').value, document.getElementById('expMod_b').value, document.getElementById('expMod_c').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="expModulo_wynik" style="height: auto; border: 0;">
+            <div class="div2 divMobile">
+                <img src="./images/coffee2.png" style="max-width: 100%;">
             </div>
+            <!-- <div class="div3 divMobile"> </div>
+            <div class="div4 divMobile"> </div>
+            <div class="div5 divMobile"> </div>
+            <div class="div6 divMobile"> </div>
+            <div class="div7 divMobile"> </div>
+            <div class="div8 divMobile"> </div> -->
         </div>
-        <div class="div9 block" id="div9">
-            <h3>RSA</h3>
-            <input class="input" type="number" name="n" id="rsa_p" placeholder="p"><br>
-            <input class="input" type="number" name="n" id="rsa_q" placeholder="q"><br>
-            <input class="input" type="number" name="n" id="rsa_m" placeholder="m"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="rsa(document.getElementById('rsa_p').value, document.getElementById('rsa_q').value, document.getElementById('rsa_m').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="rsa_wynik" style="height: auto; border: 0;">
-            </div>
-        </div>
-        <div class="div10 block" id="div10">
-            <h3>RSA z kluczem publicznym e</h3>
-            <input class="input" type="number" name="n" id="Ersa_p" placeholder="p"><br>
-            <input class="input" type="number" name="n" id="Ersa_q" placeholder="q"><br>
-            <input class="input" type="number" name="n" id="Ersa_m" placeholder="m"><br>
-            <input class="input" type="number" name="n" id="Ersa_e" placeholder="e"><br>
-            <input class="input" type="button" value="Licz"
-                onclick="Ersa(document.getElementById('Ersa_p').value, document.getElementById('Ersa_q').value, document.getElementById('Ersa_m').value, document.getElementById('Ersa_e').value)"
-                style="font-weight: bold;"><br>
-            <div class="block" id="Ersa_wynik" style="height: auto; border: 0;">
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 <script src="js.js"></script>
 
