@@ -1,16 +1,139 @@
-body{
-    background-color: #f0d3b9;
-    background-image: linear-gradient(0deg, #f0d3b9, antiquewhite);
-    position: absolute;
-}
-main{
-    background-color: antiquewhite;
-    margin: auto;
-    width: 80%;
-    padding: 20px;
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #edc098;
 }
 
+/**
+*
+*   Navbar
+*
+*/
+nav {
+  position: sticky;
+  top: 0;
+}
 
+.navUl {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.navLi {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  align-items: center;
+  margin: auto;
+}
+.navImg {
+  max-height: 60px;
+}
+.navA {
+  text-decoration: none;
+  color: white;
+}
+.sticky {
+  -webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+  background-color: #1a1a1a;
+}
+
+/**
+*
+*   Div 1
+*
+*/
+.div1 .flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+
+.div1 .flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  min-height: 80px;
+}
+
+.div1 .flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  min-height: 100px;
+}
+
+.div1 .flex-items:nth-child(3) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  min-height: 100px;
+}
+
+.div1 ul {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.div1 li {
+  list-style: none;
+  margin-right: 20px;
+  align-items: center;
+  margin: auto;
+}
+
+/* .header{
+    padding: 10px 16px;
+    background: null;
+    color: #f1f1f1;
+}
+.content {
+    padding: 16px;
+}
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1a1a1a;
+}
+.sticky + .content {
+    padding-top: 102px;
+}
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbarLi{
+    float: left;
+}
+.navbarA{
+    display: block;
+    padding: 8px;
+} */
+/* 
 .parent {
     display: grid;
     grid-template-columns: 1fr;
@@ -49,4 +172,4 @@ main{
 
 .divMobile{
     padding: 20px;
-}
+} */
