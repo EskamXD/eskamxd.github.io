@@ -1,73 +1,106 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokój 315</title>
-    <link rel="stylesheet" href="css.css">
+    <title>Strona główna</title>
+    <!-- <link rel="stylesheet" href="phone.css"> -->
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/pc.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/phone.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav id="myHeader">
-        <ul class="navUl" style="font-family: 'Roboto', sans-serif;">
-            <li class="navLi"><img src="./images/takeaway-coffee.png" alt="Kawusia na wynos dla biednego studenta"
-                    class="navImg"></li>
-            <li class="navLi"><a href="" class="navA">Home</a></li>
-            <li class="navLi"><a href="" class="navA">O nas</a></li>
-            <li class="navLi"><a href="" class="navA">Merch</a></li>
+    <!-- <nav id="pc-nav">
+        <ul>
+            <a href="#"><img src="./icons/coffee-cup.png" alt="Logo"></a>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Merch</a></li>
         </ul>
     </nav>
-    <main class="content">
-        <div class="div1 flex-container">
-            <div class="div1 flex-items"></div>
-            <div class="div1 flex-items"
-                style="font-family: 'Pacifico', cursive; color: white; font-size: 4em; text-align: center;">
-                Tutaj
-                zaczyna się
-                dobra
-                znajomość...</div>
-            <div class="div1 flex-items">
-                <ul class="div1">
-                    <li class="div1"><a href=""><img src="./images/facebook.png" alt="Facebook icon"
-                                style="max-height: 20px;"></a></li>
-                    <li class="div1"><a href=""><img src="./images/instagram.png" alt="Instagram icon"
-                                style="max-height: 20px;"></a></li>
-                    <li class="div1"><a href=""><img src="./images/twitter.png" alt="Twitter icon"
-                                style="max-height: 20px;"></a></li>
-                </ul>
-            </div>
+    <nav id="mobile-nav">
+        <a href="#"><img src="./icons/coffee-cup.png" alt="Logo"></a>
+        <div id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <!-- <div class="parent">
-            <div class="div1 divMobile">
-                <h1 style="font-family: 'Dancing Script', cursive; font-size: xx-large;">Tu zaczyna się dobra kawa...
-                </h1>
-                <h3 style="font-family: 'Roboto', sans-serif;">Kawusia studencka - 2.50 zł</h2>
-                    <ul style="font-family: 'Roboto', sans-serif;">
-                        <li>Czarna</li>
-                        <li>Biała</li>
-                        <li>Latte</li>
-                    </ul>
-
-            </div>
-            <div class="div2 divMobile">
-                <img src="./images/coffee2.png" style="max-width: 100%;">
-            </div>
-            <!-- <div class="div3 divMobile"> </div>
-            <div class="div4 divMobile"> </div>
-            <div class="div5 divMobile"> </div>
-            <div class="div6 divMobile"> </div>
-            <div class="div7 divMobile"> </div>
-            <div class="div8 divMobile"> </div> -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Merch</a></li>
+        </ul>
+    </nav> -->
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo"><img src="./icons/coffee-cup.png" alt="logo"></a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./html/about.html">O nas</a> </li>
+                <li><a href="./html/merch.html">Merch</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Tutaj zaczyna się dobra znajomość...</h2>
+        <div class="social">
+            <a href="#" class="social-button"><img src="./icons/facebook.png" alt="Social Icon 1"
+                    style="max-height: 50px;"></a>
+            <a href="#" class="social-button"><img src="./icons/instagram.png" alt="Social Icon 2"
+                    style="max-height: 50px;"></a>
+            <a href="#" class="social-button"><img src="./icons/twitter.png" alt="Social Icon 3"
+                    style="max-height: 50px;"></a>
         </div>
+        <div id="arrow"></div>
     </main>
+    <section id="coffee">
+        <!-- animate fade in from left title and ul list when scroll is on -->
+        <div class="left">
+            <h3>Kawusia studencka</h3>
+            <ul>
+                <li>Kawa Czarna</li>
+                <li>Kawa Biała</li>
+                <li>Latte Macchiato</li>
+            </ul>
+        </div>
+        <div class="right">
+            <img src="./photos/coffee1.jpg" alt="Photo">
+        </div>
+    </section>
+    <section class="scrolling-background">
+        <h2>Wszystkie kawy 2,50 PLN!</h2>
+    </section>
+    <section id="beer">
+        <div class="left">
+            <img src="./photos/beer1.jpg" alt="Photo 2">
+        </div>
+        <div class="right">
+            <h2>Towarzystwo do browarka</h2>
+        </div>
+    </section>
+    <footer>
+        <img src="./icons/coffee-cup.png" alt="Logo">
+        <hr style="width: 60%;">
+        <div>
+            <a href=" #"><img src="./icons/facebook.png" alt="Social Icon 1"></a>
+            <a href="#"><img src="./icons/instagram.png" alt="Social Icon 2"></a>
+            <a href="#"><img src="./icons/twitter.png" alt="Social Icon 3"></a>
+        </div>
+        <p>
+            All rights reserved &copy; 2020 by <a href="Kamil Urbanowski">Kamil Urbanowski</a>
+        </p>
+    </footer>
 </body>
 <script src="js.js"></script>
 
