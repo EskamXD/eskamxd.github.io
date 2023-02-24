@@ -1,5 +1,6 @@
 :root {
   --white: #f9f9f9;
+  --dirty-white: #ebebeb;
   --black: #36383f;
   --gray: #85888c;
   --creamy: #edc098;
@@ -11,9 +12,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
 body {
   background-color: var(--white);
   font-family: pacifico, sans-serif;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 a {
   text-decoration: none;
@@ -21,10 +33,14 @@ a {
 ul {
   list-style: none;
 }
+header .content {
+  justify-content: space-between;
+  z-index: 20;
+}
 /* Header */
 .header {
   background-color: var(--creamy);
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   width: 100%;
   height: 70px;
@@ -121,6 +137,14 @@ ul {
 }
 
 /* Main */
+main .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -129,12 +153,12 @@ main {
   height: 80vh;
   background-color: var(--creamy);
 }
-main h2 {
+main .content h2 {
   font-size: 40px;
   color: var(--white);
   margin-bottom: 20px;
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 10vh;
   align-self: center;
   width: 70%;
 }
@@ -148,6 +172,11 @@ main .social-button {
   margin: 5vh 2vh;
 }
 
+main .content div h1 {
+  color: var(--dirty-white);
+  font-weight: 100;
+}
+
 #arrow {
   width: 2vh;
   height: 2vh;
@@ -156,13 +185,15 @@ main .social-button {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  margin-top: 5vh;
+  /* margin-top: 2vh; */
+  margin-bottom: 5vh;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   animation: bounce 2s infinite;
+  z-index: 1;
 }
 @keyframes bounce {
   0% {
@@ -186,6 +217,14 @@ main .social-button {
   flex-direction: column;
   font-size: 6vw;
 }
+#coffee .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 #coffee .left {
   width: 100%;
   height: 100%;
@@ -194,6 +233,7 @@ main .social-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 #coffee .right {
   width: 100%;
@@ -209,7 +249,7 @@ main .social-button {
 }
 
 .scrolling-background {
-  background-image: url("../photos/coffee2.jpg");
+  background-image: url("../images/webp_compressed/coffee2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -220,7 +260,13 @@ main .social-button {
   display: flex;
   justify-content: center;
 }
-.scrolling-background h2 {
+.scrolling-background .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scrolling-background .content h2 {
   text-align: center;
   align-self: center;
   width: 70%;
@@ -233,6 +279,14 @@ main .social-button {
   flex-direction: column-reverse;
   font-size: 6vw;
 }
+#beer .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
 #beer .right {
   width: 100%;
   height: 100%;
@@ -241,6 +295,7 @@ main .social-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 #beer .right h2 {
   text-align: center;
@@ -270,12 +325,20 @@ footer {
   flex-direction: column;
   gap: 1vh;
 }
-footer img {
+footer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+footer .content img {
   width: 10vw;
   height: 10vw;
   margin: 0 2vw;
 }
-footer p a {
+footer .content p a {
   color: var(--white);
   text-decoration: none;
 }
