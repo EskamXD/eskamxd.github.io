@@ -330,12 +330,11 @@ li {
 }
 
 .scrolling-background {
-  background-image: url("../images/webp_compressed/coffee2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: var(--creamy);
+  background-color: var(--white);
 }
 .scrolling-background h2 {
   display: inline-block;
