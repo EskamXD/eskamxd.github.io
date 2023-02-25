@@ -1,26 +1,25 @@
-// $(window).on('scroll', function() {
-//     if ($('.left').offset().top < $(window).scrollTop() + $(window).height() * 1.2) {
-//         $('.left').addClass('show');
-//     }
-//     if ($('.right').offset().top < $(window).scrollTop() + $(window).height() * 1.2) {
-//         $('.right').addClass('show');
-//     }
+// Get the button
+let mybutton = document.getElementById("button-top");
 
-// });
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-// const left = document.querySelector('.left');
-// const observer = new IntersectionObserver(entries => {
-//     if (entries[0].isIntersecting) {
-//         left.classList.add('show');
-//         observer.disconnect();
-//     }
-// });
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    // mybutton.style.display = "flex";
+    mybutton.style.cursor = "pointer";
+    mybutton.style.opacity = "1";
+  } else {
+    // mybutton.style.display = "none";
 
-// observer.observe(left);
+    mybutton.style.cursor = "default";
+    mybutton.style.opacity = "0";
+  }
+}
 
-// $(document).ready(function() {
-//     $("#nav-toggle").click(function() {
-//       $("ul").toggleClass("active");
-//     });
-//   });
-  
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+window.scrollTo({top: 0, behavior: 'smooth'});
+}

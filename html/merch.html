@@ -3,9 +3,10 @@
 <head>
     <!DOCTYPE html>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#edc098">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokój 315 - Merch</title>
+    <title>Pokój 315 - O nas</title>
     <!-- <link rel="stylesheet" href="phone.css"> -->
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="../css/pc.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/phone.css">
@@ -16,9 +17,12 @@
 </head>
 
 <body>
+    <button onclick="topFunction()" id="button-top" title="Go to top">
+        <div id="button-arrow"></div>
+    </button>
     <!-- Navigation bar -->
-    <header class="header">
-        <div class="content">
+    <header class="header content-flex" id="main">
+        <div class="content-row screen mobile-switch">
             <!-- Logo -->
             <a href="../index.html" class="logo"><img src="../icons/webp_compressed/coffee-cup.webp" alt="logo"></a>
             <!-- Hamburger icon -->
@@ -27,51 +31,57 @@
             <!-- Menu -->
             <nav class="nav">
                 <ul class="menu">
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/home.html">Home</a></li>
                     <li><a href="../html/about.html">O nas</a> </li>
                     <li><a href="../html/merch.html">Merch</a></li>
+                    <li><a href="../html/service.html">Serwis i usługi</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- Title content -->
-    <main>
-        <div class="content">
-            <h2>Tutaj zaczyna się dobra znajomość...</h2>
+    <main class="title-screen content-flex">
+        <div class="content-column screen">
+            <h2>Merch</h2>
             <!-- Social media icons -->
             <div class="social">
-                <a href="#" class="social-button"><img src="../icons/webp_compressed/facebook.webp" alt="Social Icon 1"
-                        style="max-height: 50px;"></a>
-                <a href="#" class="social-button"><img src="../icons/webp_compressed/instagram.webp" alt="Social Icon 2"
-                        style="max-height: 50px;"></a>
-                <a href="#" class="social-button"><img src="../icons/webp_compressed/twitter.webp" alt="Social Icon 3"
-                        style="max-height: 50px;"></a>
+                <a href="https://www.facebook.com/Urban4G" class="social-button" target="_blank"><img
+                        src="../icons/webp_compressed/facebook.webp" alt="Facebook link"></a>
+                <a href="https://www.instagram.com/urbanseskam/" class="social-button" target="_blank"><img
+                        src="../icons/webp_compressed/instagram.webp" alt="Instagram link"></a>
+                <a href="https://twitter.com/EskamXD" class="social-button" target="_blank"><img
+                        src="../icons/webp_compressed/twitter.webp" alt="Twitter link"></a>
             </div>
-            <div id="arrow"></div>
+            <div class="arrow-mobile arrow-pc">
+                <div id="arrow"></div>
+            </div>
         </div>
     </main>
-
-
+    <!-- Legends section -->
+    <section class="background content-flex" style="height: 100vh; text-align: center;">
+        <h1 style="font-size: 4vmax; font-weight: 300;">Tutaj jeszcze nic nie ma, ale może kiedyś? 🤔</h1>
+    </section>
     <!-- Footer -->
-    <footer>
-        <div class="content">
-            <img src="../icons/webp_compressed/coffee-cup.webp" alt="Logo" style="max-height: 50px;" loading="lazy">
-            <hr style="width: 60%;">
+    <footer class="footer content-flex">
+        <div class="content-column screen" style="gap: 5%;">
+            <a href="#main" class="social-button"><img src="../icons/webp_compressed/coffee-cup.webp" alt="Logo"
+                    loading="lazy"></a>
+            <hr style="width: 60%; margin: 20px">
             <!-- Social media icons -->
-            <div>
-                <a href="#"><img src="./icons/webp_compressed/facebook.webp" alt="Social Icon 1"
-                        style="max-height: 50px;" loading="lazy"></a>
-                <a href="#"><img src="./icons/webp_compressed/instagram.webp" alt="Social Icon 2"
-                        style="max-height: 50px;" loading="lazy"></a>
-                <a href="#"><img src="./icons/webp_compressed/twitter.webp" alt="Social Icon 3"
-                        style="max-height: 50px;" loading="lazy"></a>
+            <div class="social">
+                <a href="https://www.facebook.com/Urban4G" class="social-button" target="_blank"><img
+                        src="../icons/webp_compressed/facebook.webp" alt="Facebook link"></a>
+                <a href="https://www.instagram.com/urbanseskam/" class="social-button" target="_blank"><img
+                        src="../icons/webp_compressed/instagram.webp" alt="Instagram link"></a>
+                <a href="https://twitter.com/EskamXD" class="social-button" target="_blank"><img
+                        src="../icons/webp_compressed/twitter.webp" alt="Twitter link"></a>
             </div>
             <p>
-                All rights reserved &copy; 2020 by <a href="Kamil Urbanowski">Kamil Urbanowski</a>
+                All rights reserved &copy; 2023 by <a href="Kamil Urbanowski" class="rights-name">Kamil Urbanowski</a>
             </p>
         </div>
     </footer>
 </body>
-<script src="js.js"></script>
+<script src="../js.js"></script>
 
 </html>
