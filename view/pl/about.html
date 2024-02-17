@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Kamil Urbanowski">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#352F44">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EskamXD - Portfolio</title>
+
+    <link rel="icon" href="../icons/oryginal/logo dark.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../css/pc.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/phone.css">
+</head>
+
+<body>
+    <button onclick="topFunction()" id="button-top" class="content-flex" title="Go to top">
+        <div id="button-arrow"></div>
+    </button>
+    <!-- Navigation bar -->
+    <header class="header" id="main">
+        <div class="content-beetwen screen-width">
+            <div class="content-row">
+                <!-- Logo -->
+                <a href="home.html" class="icon"><img src="../icons/oryginal/logo light.png" alt="logo"
+                        class="logo small rotate"></a>
+                <!-- Hamburger icon -->
+                <input class="side-menu" type="checkbox" id="side-menu" unset />
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+                <!-- Menu -->
+                <!-- <nav class="nav content-flex" style="background-image: url(../images/without-compression/navigation\ gif.gif); background-size: cover;"> -->
+                <nav class="nav content-flex">
+                    <ul class="menu">
+                        <li>
+                            <a class="floor" href="home.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="about.html">O mnie</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Język
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="home.html">Polski</a></li>
+                    <li><a class="dropdown-item" href="../en/home.html">Angielski</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="background-image content-flex" style="background-image: url('../pexels-karol-d-841228.jpg');">
+        <div class="content-column screen-height">
+            <div class="content-column screen">
+                <h1>EskamXD</h1>
+                <p>Witaj na mojej stronie portfolio</p>\
+            </div>
+            <div id="scroll-action" class="content-row gap-h-2"
+                style="position: absolute; bottom: 2vh; color: var(--light);">
+                <div class="scroll-box">
+                    <div class="scroll-element"></div>
+                </div>
+                <p>scroll</p>
+            </div>
+        </div>
+    </section>
+    <main class="content-row screen-height" style="border-radius: 15px;">
+        <div class="content-column screen-width" style="border-radius: 15px;">
+            <h2 class="dark">O mnie</h2>
+            <p>
+                Witaj! Jestem studentem informatyki na Politechnice Krakowskiej. Moja pasja do technologii
+                zapoczątkowała
+                się już w okresie szkolnym, kiedy to zdecydowałem, że moją przyszłością będzie praca w obszarze IT.
+                Obecnie intensywnie rozwijam swoje umiejętności, aby móc odnieść sukces w tej dynamicznie rozwijającej
+                się dziedzinie.
+            </p>
+            <p>
+                Jeśli chodzi o moje zainteresowania i hobby, uwielbiam angażować się w różnego rodzaju projekty DIY.
+                Naprawa urządzeń elektronicznych, tworzenie własnych gadżetów czy konstruowanie z klocków Lego to dla
+                mnie sposób na wyrażanie kreatywności i rozwijanie zdolności manualnych. Fascynuje mnie również
+                mechanika samochodowa, choć nie jestem profesjonalnym mechanikiem, to lubię eksperymentować z naprawami
+                i modyfikacjami samochodów, co pozwala mi lepiej zrozumieć, jak działa każdy element.
+            </p>
+            <p>
+                Aktywność fizyczna odgrywa również ważną rolę w moim życiu. Uwielbiam wybierać się na wycieczki górskie,
+                gdzie mogę cieszyć się pięknem natury i relaksować się z dala od miejskiego zgiełku. Ponadto, regularne
+                treningi na siłowni pomagają mi utrzymać dobrą kondycję fizyczną i psychiczną.
+            </p>
+            <!-- <p>
+                Jeśli chodzi o moją ścieżkę zawodową, posiadam solidne doświadczenie w obszarze informatyki. Mam
+                umiejętności z zakresu serwisu komputerowego, zarządzania systemami oraz grafiki komputerowej. Moja
+                znajomość Photoshopa pozwala mi tworzyć grafiki o wysokiej jakości oraz manipulować zdjęciami w sposób
+                kreatywny i profesjonalny. Dodatkowo, mam doświadczenie w tworzeniu stron internetowych, zarówno poprzez
+                pisanie kodu HTML, CSS, JS, jak i korzystanie z popularnych systemów zarządzania treścią, takich jak
+                Wordpress, gdzie posługuję się różnymi builderami, aby osiągnąć pożądany efekt.
+            </p>
+            <p>
+                Prowadzenie kampanii marketingowych w Google Ads to dla mnie ważny element mojej pracy. Potrafię
+                skutecznie tworzyć reklamy, analizować dane i dostosowywać strategię w oparciu o wyniki. Dodatkowo, moje
+                umiejętności programistyczne w języku Python pozwalają mi tworzyć skrypty i programy automatyzujące
+                różnorodne procesy, co przekłada się na efektywność i oszczędność czasu w pracy.
+            </p> -->
+            <p>
+                Jestem elastyczny, co pozwala mi szybko dostosowywać się do zmieniających się warunków pracy oraz
+                różnorodnych zadań, które napotykam. Moja zdolność szybkiego przyswajania nowych technologii sprawia, że
+                jestem w stanie skutecznie korzystać z najnowszych narzędzi i rozwiązań w mojej dziedzinie. Zawsze
+                staram się podejść do problemów i wyzwań w sposób kreatywny, poszukując nietypowych rozwiązań, które
+                mogą przynieść pozytywne efekty zarówno w życiu zawodowym, jak i osobistym. Uważam, że elastyczność i
+                otwartość na nowe pomysły są kluczowe dla osiągnięcia sukcesu w dzisiejszym szybko zmieniającym się
+                świecie. Dążę do ciągłego doskonalenia się, aby być przygotowanym na nowe wyzwania i możliwości, jakie
+                niesie ze sobą przyszłość.
+            </p>
+            <a class="btn btn-primary" href="about.html">Czytaj więcej</a>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer content-flex">
+        <div class="content-column screen" style="gap: 5%;">
+            <a href="/" class="social-button"><img src="../icons/oryginal/logo dark.png" alt="Logo" class="logo rotate"
+                    loading="lazy"></a>
+            <hr class="content-80" style="border-top: 3px var(--main) solid;">
+            <!-- Social media icons -->
+            <div class="social">
+                <a href="https://www.facebook.com/Urban4G" class="social-button" target="_blank"><img
+                        src="../icons/oryginal/facebook dark.png" alt="Facebook link" class="logo hover-scale"></a>
+                <a href="https://www.instagram.com/urbanseskam/" class="social-button" target="_blank"><img
+                        src="../icons/oryginal/instagram dark.png" alt="Instagram link" class="logo hover-scale"></a>
+                <a href="https://twitter.com/EskamXD" class="social-button" target="_blank"><img
+                        src="../icons/oryginal/twitter dark.png" alt="Twitter link" class="logo hover-scale"></a>
+            </div>
+            <p>
+                All rights reserved &copy; 2024 by <a href="https://eskamxd.github.io" class="dark">Kamil
+                    Urbanowski</a>
+            </p>
+        </div>
+    </footer>
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById('side-menu').checked = false;
+    }
+</script>
+<script src="../js.js"></script>
+
+</html>
