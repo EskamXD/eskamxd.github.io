@@ -1,0 +1,282 @@
+<html>
+
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Kamil Urbanowski">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#352F44">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EskamXD - Portfolio</title>
+
+    <link rel="icon" href="../../icons/oryginal/logo dark.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../../css/pc.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../../css/phone.css">
+</head>
+
+<body>
+    <button onclick="topFunction()" id="button-top" class="content-flex" title="Go to top">
+        <div id="button-arrow"></div>
+    </button>
+    <!-- Navigation bar -->
+    <header class="header" id="main">
+        <div class="content-beetwen screen-width">
+            <div class="content-row">
+                <!-- Logo -->
+                <a href="home.html" class="icon"><img src="../../icons/oryginal/logo light.png" alt="logo"
+                        class="logo small rotate"></a>
+                <!-- Hamburger icon -->
+                <input class="side-menu" type="checkbox" id="side-menu" unset />
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+                <!-- Menu -->
+                <!-- <nav class="nav content-flex" style="background-image: url(../images/without-compression/navigation\ gif.gif); background-size: cover;"> -->
+                <nav class="nav content-flex">
+                    <ul class="menu">
+                        <li>
+                            <a class="floor" href="home.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="about.html">About me</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Language
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../pl/home.html">Polish</a></li>
+                    <li><a class="dropdown-item" href="home.html">English</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="background-image content-flex" style="background-image: url('../../pexels-karol-d-841228.jpg');">
+        <div class="content-column screen-height">
+            <div class="content-column screen">
+                <h1>EskamXD</h1>
+                <p>Welcom to my portfolio site</p>\
+            </div>
+            <div id="scroll-action" class="content-row gap-h-2"
+                style="position: absolute; bottom: 2vh; color: var(--light);">
+                <div class="scroll-box">
+                    <div class="scroll-element"></div>
+                </div>
+                <p>scroll</p>
+            </div>
+        </div>
+    </section>
+    <main class="content-row screen-height" style="border-radius: 15px;">
+        <div class="content-column screen-width" style="border-radius: 15px;">
+            <h2 class="dark">Little about me</h2>
+            <p>
+                Hi there! I am a computer science student at the Krakow University of Technology. My passion for
+                technology
+                began during my school years when I decided that my future lies in the field of IT. Currently, I am
+                intensively developing my skills to succeed in this dynamically evolving domain.
+            </p>
+            <p>
+                When it comes to my interests and hobbies, I love engaging in various DIY projects. Repairing electronic
+                devices, creating my own gadgets, or building with Lego bricks are ways for me to express creativity and
+                develop manual skills. I am also fascinated by automotive mechanics. Although I'm not a professional
+                mechanic, I enjoy experimenting with car repairs and modifications, which helps me better understand how
+                each component works.
+            </p>
+            <p>
+                Physical activity also plays an important role in my life. I enjoy going on mountain hikes, where I can
+                appreciate the beauty of nature and relax away from the urban hustle and bustle. Additionally, regular
+                gym
+                workouts help me maintain good physical and mental fitness.
+            </p>
+            <p>
+                I am adaptable, which allows me to quickly adapt to changing work conditions and diverse tasks that I
+                encounter. My ability to quickly grasp new technologies enables me to effectively utilize the latest
+                tools
+                and solutions in my field. I always strive to approach problems and challenges in a creative manner,
+                seeking
+                unconventional solutions that can bring positive results both in my professional and personal life. I
+                believe
+                that flexibility and openness to new ideas are key to achieving success in today's rapidly changing
+                world. I
+                am committed to continuous improvement to be prepared for the new challenges and opportunities that the
+                future holds.
+            </p>
+
+            <a class="btn btn-primary" href="about.html">Read more</a>
+        </div>
+    </main>
+    <!-- Portfolio -->
+    <div class="content-row" style="background-color: var(--additional); border-radius: 15px;">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide full-width" data-bs-interval="5000"
+            data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner content-flex content-unset screen-height">
+                <div class="carousel-item active">
+                    <div class="content-flex content-around">
+                        <div class="card content-flex">
+                            <img src="../../cards/photoshop.jpg" class="card-img-top image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title dark">Computer Graphics</h5>
+                                <p class="card-text">For years, I've been fascinated by computer graphics and photo
+                                    manipulation using Adobe Photoshop. With this tool, I can create unique graphic
+                                    projects, from simple banners to complex photo manipulations. My ability to use
+                                    various features and effects of Photoshop allows me to express my creativity and
+                                    adapt to different project needs.</p>
+                                <a href="#" class="btn btn-primary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-flex content-around">
+                        <div class="card content-flex">
+                            <img src="../../cards/html.jpg" class="card-img-top image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title dark">Website Development and Management</h5>
+                                <p class="card-text">I have experience in creating responsive websites and managing
+                                    them. I use HTML, CSS, and JavaScript, as well as popular CMS platforms like
+                                    Wordpress. My ability to work with various builders in Wordpress and my knowledge of
+                                    basic web technologies allow me to create aesthetic and functional websites tailored
+                                    to the needs of clients.</p>
+                                <a href="#" class="btn btn-primary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-flex content-around">
+                        <div class="card content-flex">
+                            <img src="../../cards/copywriting.jpg" class="card-img-top image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title dark">Copywriting</h5>
+                                <p class="card-text">Copywriting is another field where I have experience. I can create
+                                    advertising content, product descriptions, and website texts that help with website
+                                    positioning.</p>
+                                <a href="#" class="btn btn-primary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-flex content-around">
+                        <div class="card content-flex">
+                            <img src="../../cards/CoffeeTime.jpg" class="card-img-top image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title dark">CoffeeTime</h5>
+                                <p class="card-text">CoffeeTime is a project that I created as part of my studies. It is
+                                    a web application that helps users organize their coffee meetings. It utilizes PHP,
+                                    HTML, CSS, and JavaScript technologies to provide users with an intuitive interface
+                                    and a pleasant user experience.</p>
+                                <a href="#" class="btn btn-primary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-flex content-around">
+                        <div class="card content-flex">
+                            <img src="../../cards/Simple Blog Management System.jpg" class="card-img-top image"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title dark">Simple Blog Management System</h5>
+                                <p class="card-text">Simple Blog Management System is a project that I created to
+                                    facilitate blog management. It is a desktop application written in Python, which
+                                    allows users to manage content, add new posts, edit existing ones, and manage
+                                    images. It is a simple yet effective system that makes blog management easier,
+                                    especially when dealing with a larger number of posts.</p>
+                                <a href="#" class="btn btn-primary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content-flex content-around">
+                        <div class="card content-flex">
+                            <img src="../../cards/ReceiptRover.jpg" class="card-img-top image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title dark">ReceiptRover</h5>
+                                <p class="card-text">ReceiptRover is a group project that I created with a team of
+                                    colleagues during my studies to simplify receipt management. It is an application
+                                    using OCR technology, written in Python, and executed in a Docker container. With
+                                    this application, users can scan receipts, automatically extract information from
+                                    them, and efficiently organize and manage them.</p>
+                                <a href="#" class="btn btn-primary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer content-flex">
+        <div class="content-column screen" style="gap: 5%;">
+            <a href="/" class="social-button"><img src="../../icons/oryginal/logo dark.png" alt="Logo"
+                    class="logo rotate" loading="lazy"></a>
+            <hr class="content-80" style="border-top: 3px var(--main) solid;">
+            <!-- Social media icons -->
+            <div class="social">
+                <a href="https://www.facebook.com/Urban4G" class="social-button" target="_blank"><img
+                        src="../../icons/oryginal/facebook dark.png" alt="Facebook link" class="logo hover-scale"></a>
+                <a href="https://www.instagram.com/urbanseskam/" class="social-button" target="_blank"><img
+                        src="../../icons/oryginal/instagram dark.png" alt="Instagram link" class="logo hover-scale"></a>
+                <a href="https://twitter.com/EskamXD" class="social-button" target="_blank"><img
+                        src="../../icons/oryginal/twitter dark.png" alt="Twitter link" class="logo hover-scale"></a>
+            </div>
+            <p>
+                All rights reserved &copy; 2024 by <a href="https://eskamxd.github.io" class="dark">Kamil
+                    Urbanowski</a>
+            </p>
+        </div>
+    </footer>
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById('side-menu').checked = false;
+    }
+</script>
+<script src="../js.js"></script>
+
+</html>
