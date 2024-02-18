@@ -273,9 +273,12 @@ button.cancel {
 }
 .card-text {
     overflow: hidden;
-    /* white-space: nowrap; */
-    text-overflow: ellipsis;
-    max-height: 256px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+}
+.card-title {
+    height: 2em;
 }
 
 .content,
