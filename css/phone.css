@@ -1,7 +1,7 @@
 :root {
     --main: #352F44;
     --secondary: #5C5470;
-    --additional: #B9B4C7;
+    --additional: #858097;
     --light: #FAF0E6;
     --black: #000000;
     --white: #FFFFFF;
@@ -31,6 +31,9 @@ body {
 a {
     text-decoration: none;
     color: var(--light);
+}
+a.dark {
+    color: var(--secondary);
 }
 
 p {
@@ -94,6 +97,11 @@ h5 {
 }
 h5.dark {
     color: var(--secondary);
+}
+
+li {
+    font-size: 16px;
+    color: var(--additional);
 }
 
 label {
@@ -212,7 +220,7 @@ button.cancel {
 .background-image {
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -261,7 +269,7 @@ button.cancel {
 /*========================================*/
 
 .card {
-    width: 80vw;
+    max-width: 390px;
     min-height: 80vh;
     margin: 30px;
     padding: 20px;
@@ -274,8 +282,9 @@ button.cancel {
 .card-text {
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 6;
     display: -webkit-box;
+    height: 9em;
 }
 .card-title {
     height: 2em;
@@ -382,14 +391,9 @@ button.cancel {
 .content-unset {
     justify-content: unset;
 }
-
-.content-80 {
-    width: 80%;
-}
-
-.content-start {
+/* .content-start {
     align-items: flex-start;
-}
+} */
 
 /*========================================*/
 /* F */
@@ -414,6 +418,24 @@ form>div {
 /*========================================*/
 /* G */
 /*========================================*/
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vh;
+}
+.gallery-item {
+    display: flex;
+    aspect-ratio: 1;
+}
+.gallery-image {
+    max-width: 100%;
+    object-fit: cover;
+    scale: 1;
+    transition: 0.25s ease-out;
+    border-radius: 15px;
+    border: 1px solid var(--secondary);
+}
+
 .gap-h-2 {
     gap: 2vh;
 }
@@ -643,6 +665,9 @@ input[type="radio"]:checked~label {
 .screen-height {
     min-height: calc(100vh - 65px);
 }
+.screen-width {
+    width: 90%;
+}
 
 .scroll-box {
     height: 10vh;
@@ -679,4 +704,36 @@ input[type="radio"]:checked~label {
     100% {
         opacity: 0;
     }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.social-button {
+    display: inherit;
+    justify-content: center;
+}
+
+.social-button > img {
+    width: 80%;
+}
+
+/*========================================*/
+/* U */
+/*========================================*/
+.underlined {
+    position: relative;
+    text-decoration: none;
+}
+.underlined::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 50vw); /* Szerokość linii, możesz dostosować według potrzeb */
+    height: 2px; /* Grubość linii */
+    background-color: var(--secondary); /* Kolor linii */
+    bottom: 0px; /* Odległość linii od tekstu (możesz dostosować) */
+    right: 0; /* Przesunięcie linii w lewo (możesz dostosować) */
 }

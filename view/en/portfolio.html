@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <!DOCTYPE html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Kamil Urbanowski">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#352F44">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kamil Urbanowski - Portfolio</title>
+
+    <link rel="icon" href="../../icons/oryginal/logo dark.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../../css/pc.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../../css/phone.css">
+</head>
+
+<body>
+    <button onclick="topFunction()" id="button-top" class="content-flex" title="Go to top">
+        <div id="button-arrow"></div>
+    </button>
+    <!-- Navigation bar -->
+    <header class="header" id="main">
+        <div class="content-beetwen screen-width">
+            <div class="content-row">
+                <!-- Logo -->
+                <a href="home.html" class="icon"><img src="../../icons/oryginal/logo light.png" alt="logo"
+                        class="logo small rotate"></a>
+                <!-- Hamburger icon -->
+                <input class="side-menu" type="checkbox" id="side-menu" unset />
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+                <!-- Menu -->
+                <!-- <nav class="nav content-flex" style="background-image: url(../images/without-compression/navigation\ gif.gif); background-size: cover;"> -->
+                <nav class="nav content-flex">
+                    <ul class="menu">
+                        <li>
+                            <a class="floor" href="home.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="about.html">About me</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="floor" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Language
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../pl/portfolio.html">Polish</a></li>
+                    <li><a class="dropdown-item" href="portfolio.html">English</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="background-image content-flex" style="background-image: url('../../pexels-karol-d-841228.jpg');">
+        <div class="content-column screen-height">
+            <div class="content-column screen">
+                <h1>Kamil Urbanowski</h1>
+                <p>My works</p>
+            </div>
+            <div id="scroll-action" class="content-row gap-h-2"
+                style="position: absolute; bottom: 2vh; color: var(--light);">
+                <div class="scroll-box">
+                    <div class="scroll-element"></div>
+                </div>
+                <p>scroll</p>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <main class="content-row screen-height" style="border-radius: 15px;">
+        <div class="content-column screen-width-60 gap-h-10" style="border-radius: 15px; padding: 20px 0;">
+            <div id="photoshop">
+                <h3 class="dark underlined">Photoshop</h3>
+                <p>I think actions will speak louder than words in this case. Gallery:</p>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="../../gallery/Konkursowe.jpg" target="_blank" class="gallery-item"><img
+                                src="../../gallery/Konkursowe.jpg" alt="Logo" class="gallery-image"></a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="../../gallery/Manipulacja otoczeniem.png" target="_blank" class="gallery-item"><img
+                                src="../../gallery/Manipulacja otoczeniem.png" alt="Logo" class="gallery-image"></a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="../../gallery/Profilowe 4.jpg" target="_blank" class="gallery-item"><img
+                                src="../../gallery/Profilowe 4.jpg" alt="Logo" class="gallery-image"></a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="../../gallery/Profilowe (konkursowe).png" target="_blank" class="gallery-item"><img
+                                src="../../gallery/Profilowe (konkursowe).png" alt="Logo" class="gallery-image"></a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="../../gallery/lab03.png" target="_blank" class="gallery-item"><img
+                                src="../../gallery/lab03.png" alt="Logo" class="gallery-image"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="html">
+                <h3 class="dark underlined" style="max-width:100%;">HTML</h3>
+                <p>I'm familiar with HTML because I use it to manage or modify websites. In fact, as you can see, this
+                    entire website is hand-written by me using HTML/CSS/JS.</p>
+            </div>
+            <div id="copywriting">
+                <h3 class="dark underlined">SEO & Copywriting</h3>
+                <p>Through managing websites, I've learned copywriting with a focus on SEO. I can create diverse texts
+                    with an emphasis on specific keywords and SEO, with little assistance. Headings, paragraphs, or
+                    bolded words are essential. Detailed alternative descriptions, internal links, graphics? Not every
+                    beginner may know about those. I'm self-taught, and my knowledge of the subject comes from managing
+                    website projects.</p>
+            </div>
+            <div id="coffeetime">
+                <h3 class="dark underlined">Coffeetime</h3>
+                <p>CoffeeTime is my original web application designed to connect people for coffee meetings. It was
+                    created for a project during my studies, but it's an extension of the idea for a café website in the
+                    dormitory. The application combines the basics of HTML/CSS/JS for front-end development and mainly
+                    PHP for back-end development. Users can choose a convenient time for a coffee meeting, and the
+                    system automatically matches them and assigns a time within their availability. The idea for it came
+                    to me while... drinking coffee.</p>
+                <a class="btn btn-primary" href="https://github.com/EskamXD/CoffeeTime">View on GitHub</a>
+            </div>
+            <div id="simple-blog-management-system">
+                <h3 class="dark underlined">Simple blog management system</h3>
+                <p>Simple blog management system is a desktop application written in Python. It is designed based on my
+                    preferences, which include creating applications that simplify life and automate work. The idea for
+                    it arose in me during a project where I was tasked with writing posts for a website to optimize
+                    keywords for SEO. I needed a tool that would allow me to easily control the content I had already
+                    written, create thumbnails for posts, and check their metadata to ensure they are of appropriate
+                    length. The application uses the tkinter library with the ttkbootstrap wrapper for displaying the
+                    window. It utilizes a couple of design patterns that I learned in one of my courses.</p>
+                <a class="btn btn-primary" href="https://github.com/EskamXD/simple-blog-management-system">View on
+                    GitHub</a>
+            </div>
+            <div id="receiptrover">
+                <h3 class="dark underlined">Receiptrover</h3>
+                <p>ReceiptRover is an OCR (Optical Character Recognition) application for scanning receipts and saving
+                    expenses with the ability to later analyze them. It was developed by me and a group of colleagues as
+                    a software engineering project. My main contribution to the application was creating the dynamic GUI
+                    (Graphical User Interface). Once again, I used the tkinter library along with ttkbootstrap, which I
+                    was already familiar with from a previous application.</p>
+                <a class="btn btn-primary" href="https://github.com/Nokrad997/ReceiptRover">View on GitHub</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer content-flex">
+        <div class="content-column screen" style="gap: 5%;">
+            <a href="/" class="social-button"><img src="../../icons/oryginal/logo dark.png" alt="Logo"
+                    class="logo rotate" loading="lazy"></a>
+            <hr class="content-column">
+            <!-- Social media icons -->
+            <div class="social">
+                <a href="https://www.facebook.com/Urban4G" class="social-button" target="_blank"><img
+                        src="../../icons/oryginal/facebook dark.png" alt="Facebook link" class="logo hover-scale"></a>
+                <a href="https://www.instagram.com/urbanseskam/" class="social-button" target="_blank"><img
+                        src="../../icons/oryginal/instagram dark.png" alt="Instagram link" class="logo hover-scale"></a>
+                <a href="https://twitter.com/EskamXD" class="social-button" target="_blank"><img
+                        src="../../icons/oryginal/twitter dark.png" alt="Twitter link" class="logo hover-scale"></a>
+            </div>
+            <p>
+                All rights reserved &copy; 2024 by <a href="https://eskamxd.github.io" class="dark">Kamil
+                    Urbanowski</a>
+            </p>
+        </div>
+    </footer>
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById('side-menu').checked = false;
+    }
+</script>
+<script src="../../js.js"></script>
+
+</html>

@@ -1,7 +1,7 @@
 :root {
     --main: #352F44;
     --secondary: #5C5470;
-    --additional: #B9B4C7;
+    --additional: #858097;
     --light: #FAF0E6;
     --black: #000000;
     --white: #FFFFFF;
@@ -102,6 +102,12 @@ h5.dark {
     color: var(--secondary);
 }
 
+li {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--additional);
+}
+
 label {
     font-size: 1.5em;
     font-weight: 300;
@@ -121,6 +127,11 @@ label.button {
 label.black {
     color: var(--black);
     border: 4px solid var(--black);
+}
+
+hr {
+    border-top: 3px var(--main) solid;
+    width: 100%;
 }
 
 /*========================================*/
@@ -281,12 +292,25 @@ button.cancel {
 /*========================================*/
 
 .card {
-    width: 40vw;
-    min-height: 80vh;
-    margin: 30px;
+    max-width: 540px;
+    min-height: 862px;
+    margin: 50px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.card-body {
+    padding: .5rem;
+}
+.card-text {
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    display: -webkit-box;
+    height: 180px;
+}
+.card-title {
+    height: 2em;
 }
 
 .content,
@@ -369,6 +393,27 @@ button.cancel {
 /*========================================*/
 /* G */
 /*========================================*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vh;
+}
+.gallery-item {
+    display: flex;
+    aspect-ratio: 1;
+}
+.gallery-image {
+    max-width: 100%;
+    object-fit: cover;
+    scale: 1;
+    transition: 0.25s ease-out;
+    border-radius: 15px;
+}
+.gallery-image:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
 .gap-h-2 {
     gap: 2vh;
 }
@@ -625,6 +670,9 @@ input[type="radio"]:checked~label {
 .screen-width {
     width: 80%;
 }
+.screen-width-60 {
+    width: 60%;
+}
 
 @media screen and (min-width: 1593px) {
     .screen-width {
@@ -673,11 +721,23 @@ input[type="radio"]:checked~label {
     display: flex;
     width: 340px;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 /*========================================*/
-/* T */
+/* U */
 /*========================================*/
-/* .text-center {
-    text-align: center;
-} */
+.underlined {
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+}
+.underlined::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 50vw); /* Szerokość linii, możesz dostosować według potrzeb */
+    height: 3px; /* Grubość linii */
+    background-color: var(--secondary); /* Kolor linii */
+    bottom: 0px; /* Odległość linii od tekstu (możesz dostosować) */
+    right: 0; /* Przesunięcie linii w lewo (możesz dostosować) */
+}
