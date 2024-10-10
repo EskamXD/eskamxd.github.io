@@ -56,15 +56,12 @@
                     </ul>
                 </nav>
             </div>
+            <!-- Dropdown for language selection -->
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Language
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="https://eskamxd.github.io/view/pl/about.html">Polish</a></li>
-                    <li><a class="dropdown-item" href="about.html">English</a></li>
-                </ul>
+                <select id="language-switcher" class="form-select" onchange="changeLanguage()">
+                    <option value="en" selected>English</option>
+                    <option value="pl">Polski</option>
+                </select>
             </div>
         </div>
     </header>
@@ -403,6 +400,34 @@
             document.getElementById('side-menu').checked = false;
         }
     </script>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language-switcher').value;
+            if (lang === 'pl') {
+                window.location.href = "https://eskamxd.github.io/view/pl/portfolio.html";
+            } else {
+                window.location.href = "https://eskamxd.github.io/view/en/portfolio.html";
+            }
+        }
+
+        // Funkcja, która ustawia odpowiedni język w dropdownie przy wczytaniu strony
+        window.onload = function () {
+            const currentUrl = window.location.href;
+            const langSwitcher = document.getElementById('language-switcher');
+
+            // Sprawdzamy URL, aby ustawić odpowiednią opcję jako wybraną
+            if (currentUrl.includes("/pl/")) {
+                langSwitcher.value = 'pl';
+            } else {
+                langSwitcher.value = 'en';
+            }
+
+            // Ustawienie menu na false po załadowaniu
+            document.getElementById('side-menu').checked = false;
+        };
+    </script>
+
     <script src="https://eskamxd.github.io/js.js"></script>
 
     <!-- Load bootstrap js -->
