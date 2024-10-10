@@ -13,6 +13,12 @@
     <title>Kamil Urbanowski - Portfolio</title>
 
     <link rel="icon" href="https://eskamxd.github.io/icons/oryginal/logo-dark.png">
+
+    <!-- hreflang for SEO -->
+    <link rel="alternate" href="https://eskamxd.github.io/view/en/portfolio.html" hreflang="en" />
+    <link rel="alternate" href="https://eskamxd.github.io/view/pl/portfolio.html" hreflang="pl" />
+    <link rel="alternate" href="https://eskamxd.github.io/view/en/portfolio.html" hreflang="x-default" />
+    <link rel="canonical" href="https://eskamxd.github.io/view/en/portfolio.html" />
 </head>
 
 <body>
@@ -50,16 +56,12 @@
                     </ul>
                 </nav>
             </div>
+            <!-- Dropdown for language selection -->
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Język
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="portfolio.html">Polski</a></li>
-                    <li><a class="dropdown-item" href="https://eskamxd.github.io/view/en/portfolio.html">Angielski</a>
-                    </li>
-                </ul>
+                <select id="language-switcher" class="form-select" onchange="changeLanguage()">
+                    <option value="en" selected>English</option>
+                    <option value="pl">Polski</option>
+                </select>
             </div>
         </div>
     </header>
@@ -82,83 +84,148 @@
     <!-- Portfolio -->
     <main class="content-row screen-height" style="border-radius: 15px;">
         <div class="content-column screen-width-60 gap-h-10" style="border-radius: 15px; padding: 20px 0;">
-            <div id="photoshop">
+            <div id="photoshop" class="mb-5">
                 <h3 class="dark underlined">Photoshop</h3>
-                <p>Myslę że w tym przypadku czyny powiedzą więcej niż słowa. Galeria:</p>
+                <p>Obrazy pokażą więcej niż słowa. Galeria:</p>
+
                 <div class="gallery">
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Konkursowe.webp" target="_blank"
-                            class="gallery-item"><img src="https://eskamxd.github.io/gallery/Konkursowe.webp" alt="Logo"
-                                class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Konkursowe.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Konkursowe.webp"
+                                alt="Projekt konkursowy - Kamil Urbanowski" class="gallery-image" id="konkursowe">
+                            <label style="color: black;" for="konkursowe">Projekt konkursowy</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp" target="_blank"
-                            class="gallery-item"><img
-                                src="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp" alt="Logo"
-                                class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp"
+                                alt="Manipulacja otoczeniem - Kamil Urbanowski" class="gallery-image" id="manipulacja">
+                            <label style="color: black;" for="manipulacja">Manipulacja otoczeniem</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Profilowe 4.webp" target="_blank"
-                            class="gallery-item"><img src="https://eskamxd.github.io/gallery/Profilowe 4.webp"
-                                alt="Logo" class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Profilowe 4.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Profilowe 4.webp"
+                                alt="Profilowe 4 - Kamil Urbanowski" class="gallery-image" id="profile-4">
+                            <label style="color: black;" for="profile-4">Profilowe</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp" target="_blank"
-                            class="gallery-item"><img
-                                src="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp" alt="Logo"
-                                class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp"
+                                alt="Profilowe (konkursowe) - Kamil Urbanowski" class="gallery-image"
+                                id="profile-konkursowe">
+                            <label style="color: black;" for="profile-konkursowe">Profilowe (konkursowe)</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/lab03.webp" target="_blank" class="gallery-item"><img
-                                src="https://eskamxd.github.io/gallery/lab03.webp" alt="Logo" class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/lab03.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/lab03.webp"
+                                alt="Projekt laboratoryjny - Kamil Urbanowski" class="gallery-image" id="lab03">
+                            <label style="color: black;" for="lab03">Projekt laboratoryjny</label>
+                        </a>
                     </div>
                 </div>
+                <p>
+                    *Dzięki zdjęciom konkursowym zostałem wyróżniony w konkursie <a
+                        href="https://faktyoswiecim.pl/dzieje-sie/edukacja/kreatywni-2021-nagrodzeni-foto/">"Kreatywni
+                        2021"</a></p>
+                </p>
             </div>
-            <div id="html">
-                <h3 class="dark underlined" style="max-width:100%;">HTML</h3>
-                <p>Z językiem, HTML jestem zaznajomiony ponieważ wykorzystuje go do zarządzania stron, albo modyfikacji
-                    ich. Zresztą jak widać cała ta strona jest ręcznie napisana przeze mnie przy wykorzystaniu właśnie
-                    HTML/CSS/JS. </p>
+
+            <div id="seo" class="mb-5">
+                <h3 class="dark underlined">SEO & Technical Optimization</h3>
+                <p>Specjalizuję się głównie w technicznych aspektach SEO, takich jak optymalizacja struktury strony,
+                    poprawa szybkości
+                    ładowania oraz techniczne audyty SEO. Mniej koncentruję się na tworzeniu treści, skupiając się na
+                    poprawnym
+                    indeksowaniu strony, zarządzaniu przekierowaniami oraz wdrażaniu najlepszych praktyk SEO pod kątem
+                    wydajności. Praca
+                    nad stroną <a class="dark" href="https://twojaprywatnosc.pl" target="_blank">twojaprywatnosc.pl</a>
+                    zaowocowała
+                    znacznym wzrostem
+                    ruchu organicznego, szczególnie dzięki poprawie technicznych aspektów strony, a także naciskiem na
+                    wdrażanie kontentu z przemyślanymi słowami kluczowymi i dobrą strukturą treści.</p>
+                <p>Poniżej znajduje się porównanie wyników strony <a class="dark" href="https://twojaprywatnosc.pl"
+                        target="_blank">twojaprywatnosc.pl</a> na przestrzeni 3 miesięcy (między
+                    10.08 a 10.10),
+                    co pokazuje efekty przeprowadzonych działań technicznych:</p>
+                <a href="https://eskamxd.github.io/images/webp-compression/poprawa-wyników-SEO.webp"
+                    data-toggle="lightbox" class="image-placeholder d-flex flex-column"
+                    style="width: 100%; height: 300px; background-color: #e0e0e0;">
+                    <img src="https://eskamxd.github.io/images/webp-compression/poprawa-wyników-SEO.webp"
+                        alt="Porównanie wyników SEO" style="width: 100%; height: 100%; object-fit: cover;">
+                    <p>Zrzut ekranu wyników z konsoli Google Search Console</p>
+                </a>
             </div>
-            <div id="copywriting">
-                <h3 class="dark underlined">SEO & Copywriting</h3>
-                <p>Poprzez zarzadzanie stronami nauczyłem się copywritingu z naciskiem na SEO strony, potrafię tworzyć
-                    (przy niewielkiej pomocy) zróżnicowane teksty z naciskiem na zadane słowa kluczowe oraz SEO.
-                    Nagłówki, paragrafy czy pogrubione słowa to podstawa. Rozbudowane opisy alternatywne, linki
-                    wewnętrzne, grafiki? O tym nie każdy początkujący może wiedzieć. Jestem samoukiem, a naukę tematu są
-                    wynikiem zleceń zarzadzania stronami. </p>
+
+            <div id="programming-studies" class="mb-5">
+                <h3 class="dark underlined">Programowanie na studiach</h3>
+                <p>Podczas studiów opracowałem kilka aplikacji, skupiając się głównie na tworzeniu aplikacji webowych z
+                    wykorzystaniem nowoczesnych technologii, takich jak React po stronie front-endu oraz Django po
+                    stronie
+                    back-endu. Te projekty pomogły mi pogłębić wiedzę na temat pełnego stacku i rozwijać umiejętności
+                    tworzenia
+                    dynamicznych, responsywnych i skalowalnych aplikacji.</p>
+
+                <div id="coffeetime" class="mb-5">
+                    <h3 class="dark underlined">Coffeetime</h3>
+                    <p>CoffeeTime to moja autorska aplikacja internetowa, służąca do łączenia ludzi na spotkania przy
+                        kawie.
+                        Powstała na potrzeby projektu na studia, jednak rozwinięta została z pierwotnego pomysłu na
+                        stronę
+                        internetową kawiarni w akademiku. Aplikacja łączy podstawy technologii webowych (HTML, CSS,
+                        JavaScript) z
+                        językiem PHP jako głównym językiem back-endu. Użytkownicy mogą wybrać dogodny termin na
+                        spotkanie, a system
+                        automatycznie dopasowuje osoby i przydziela czas w ramach ich dostępności. Pomysł na aplikację
+                        pojawił się,
+                        jak można się domyślić... podczas picia kawy.</p>
+                    <a class="btn btn-primary" href="https://github.com/EskamXD/CoffeeTime">Zobacz na GitHubie</a>
+                </div>
+
+                <div id="simple-blog-management-system" class="mb-5">
+                    <h3 class="dark underlined">Simple Blog Management System</h3>
+                    <p>Simple Blog Management System to aplikacja okienkowa napisana w Pythonie. Odzwierciedla moje
+                        zainteresowanie
+                        tworzeniem narzędzi, które ułatwiają pracę i automatyzują zadania. Pomysł zrodził się podczas
+                        projektu, w
+                        którym musiałem pisać posty na stronę internetową, optymalizując je pod kątem słów kluczowych
+                        SEO.
+                        Potrzebowałem narzędzia do łatwego zarządzania treścią, tworzenia miniatur postów oraz
+                        sprawdzania
+                        metadanych pod kątem ich długości. Aplikacja wykorzystuje bibliotekę Tkinter z nakładką
+                        ttkbootstrap do
+                        wyświetlania interfejsu i wdraża kilka wzorców projektowych, których nauczyłem się na zajęciach.
+                    </p>
+                    <a class="btn btn-primary" href="https://github.com/EskamXD/simple-blog-management-system">Zobacz na
+                        GitHubie</a>
+                </div>
+
+                <div id="receiptrover" class="mb-5">
+                    <h3 class="dark underlined">ReceiptRover</h3>
+                    <p>ReceiptRover to aplikacja OCR (Optical Character Recognition) służąca do skanowania paragonów i
+                        rejestrowania
+                        wydatków, z możliwością późniejszej analizy. Została stworzona przeze mnie oraz grupę kolegów
+                        jako projekt
+                        zaliczeniowy na zajęcia z inżynierii oprogramowania. Moim głównym wkładem było stworzenie
+                        dynamicznego
+                        interfejsu użytkownika, ponownie z wykorzystaniem biblioteki Tkinter i ttkbootstrap, które były
+                        mi już
+                        dobrze znane z wcześniejszych projektów.</p>
+                    <a class="btn btn-primary" href="https://github.com/Nokrad997/ReceiptRover">Zobacz na GitHubie</a>
+                </div>
             </div>
-            <div id="coffeetime">
-                <h3 class="dark underlined">Coffeetime</h3>
-                <p>CoffeeTime to moja autorska aplikacja internetowa, do łączenia ludzi na spotkania na kawę. Powstała
-                    na potrzeby projektu na studia aczkolwiek jest ona rozwinięciem pomysłu na stronę internetową
-                    kawiarni w akademiku. Aplikacja łączy w sobie podstawy pisania stron HTML/CSS/JS ale też głównie
-                    język PHP. Aplikacja pozwala użytkownikom na wybranie dogodnego terminu na wypicie kawy, a następnie
-                    system automatycznie łączy użytkowników i wyznacza im porę z zakresu ich godzin. Pomysł na nią wpadł
-                    mi do głowy podczas... picia kawy.</p>
-                <a class="btn btn-primary" href="https://github.com/EskamXD/CoffeeTime">View on GitHub</a>
-            </div>
-            <div id="simple-blog-management-system">
-                <h3 class="dark underlined">Simple blog management system</h3>
-                <p>Simple blog management system to aplikacja okienkowa napisana w języku python. Założeniem nawiązuje
-                    ona do moich upodobań czyli tworzenia aplikacji ułatwiających życie i automatyzujących pracę. Pomysł
-                    na nią zrodził się we mnie podczas zlecenia pisania postów na stronę do pozycjonowania słów
-                    kluczowych. Potrzebowałem narzędzia dzięki któremu będę mógł w łatwy sposób kontrolować treści które
-                    już napisałem, tworzyć miniatury do wpisów oraz sprawdzać ich metadane czy są odpowiedni długości.
-                    Do wyświetlenia okienka używa ona biblioteki tkinter z nakładką ttkbootstrap. Wykorzystuje parę
-                    wzorców projektowych których nauczyłem się na jednym z przedmiotów. </p>
-                <a class="btn btn-primary" href="https://github.com/EskamXD/simple-blog-management-system">View on
-                    GitHub</a>
-            </div>
-            <div id="receiptrover">
-                <h3 class="dark underlined">Receiptrover</h3>
-                <p>ReceiptRover - aplikacja OCR (Optical Character Recognition) do skanowania paragonów i zapisywania
-                    swoich wydatków z możliwością ich późniejszej analizy. Została napisana przeze mnie oraz grupę
-                    kolegów jako projekt zaliczeniowy z Inżynierii Oprogramowania. Moim głównym wkładem w aplikację było
-                    stworzenie dynamicznego GUI. Ponownie użyłem tutaj biblioteki tkinter wraz z ttkobootstrapem, które
-                    były mi już dobrze znajome po poprzedniej aplikacji. </p>
-                <a class="btn btn-primary" href="https://github.com/Nokrad997/ReceiptRover">View on GitHub</a>
-            </div>
+
         </div>
     </main>
 
@@ -237,12 +304,43 @@
             document.getElementById('side-menu').checked = false;
         }
     </script>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language-switcher').value;
+            if (lang === 'pl') {
+                window.location.href = "https://eskamxd.github.io/view/pl/portfolio.html";
+            } else {
+                window.location.href = "https://eskamxd.github.io/view/en/portfolio.html";
+            }
+        }
+
+        // Funkcja, która ustawia odpowiedni język w dropdownie przy wczytaniu strony
+        window.onload = function () {
+            const currentUrl = window.location.href;
+            const langSwitcher = document.getElementById('language-switcher');
+
+            // Sprawdzamy URL, aby ustawić odpowiednią opcję jako wybraną
+            if (currentUrl.includes("/pl/")) {
+                langSwitcher.value = 'pl';
+            } else {
+                langSwitcher.value = 'en';
+            }
+
+            // Ustawienie menu na false po załadowaniu
+            document.getElementById('side-menu').checked = false;
+        };
+    </script>
+
     <script src="https://eskamxd.github.io/js.js"></script>
 
     <!-- Load bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="https://eskamxd.github.io/bootstrap/lightbox_bootrstrap.bundle.min.js"></script>
+    <script src="../../bootstrap/lightbox_bootrstrap.bundle.min.js"></script>
 
 </body>
 

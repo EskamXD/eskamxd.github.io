@@ -1,10 +1,10 @@
 :root {
-    --main: #352F44;
-    --secondary: #5C5470;
+    --main: #352f44;
+    --secondary: #5c5470;
     --additional: #858097;
-    --light: #FAF0E6;
+    --light: #faf0e6;
     --black: #000000;
-    --white: #FFFFFF;
+    --white: #ffffff;
 }
 
 /*========================================*/
@@ -20,7 +20,7 @@
 html {
     scroll-behavior: smooth;
     background-color: var(--main);
-    font-family: 'Pacifico', sans-serif;
+    font-family: "Pacifico", sans-serif;
 }
 
 body {
@@ -37,8 +37,7 @@ a.dark {
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    ;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: var(--additional);
 }
@@ -79,7 +78,7 @@ h3.dark {
 h4 {
     font-size: 1.5em;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--light);
 }
 h4.dark {
@@ -92,7 +91,7 @@ h4.center {
 h5 {
     font-size: 1.5em;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--light);
 }
 h5.dark {
@@ -116,7 +115,7 @@ label.button {
     padding: 10px 20px 10px 20px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     user-select: none;
 }
@@ -171,7 +170,7 @@ button {
     padding: 10px 20px 10px 20px;
     font-size: 24px;
     font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     user-select: none;
 }
@@ -245,7 +244,7 @@ button.cancel {
     color: var(--light);
     background-color: var(--secondary);
     border-color: var(--secondary);
-    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, .5);
+    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, 0.5);
 }
 
 .btn-secondary {
@@ -262,7 +261,7 @@ button.cancel {
     color: var(--light);
     background-color: var(--main);
     border-color: var(--main);
-    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, .5);
+    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, 0.5);
 }
 
 /*========================================*/
@@ -278,7 +277,7 @@ button.cancel {
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
 .card-body {
-    padding: .5rem;
+    padding: 0.5rem;
 }
 .card-text {
     overflow: hidden;
@@ -308,8 +307,8 @@ button.cancel {
 }
 
 .content-column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .background-light {
@@ -330,7 +329,7 @@ button.cancel {
     color: var(--light);
     background-color: var(--secondary);
     border-color: var(--secondary);
-    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, .5);
+    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, 0.5);
 }
 
 .btn-secondary {
@@ -347,7 +346,7 @@ button.cancel {
     color: var(--light);
     background-color: var(--main);
     border-color: var(--main);
-    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, .5);
+    box-shadow: 0 0 0 0.25rem rgba(92, 84, 112, 0.5);
 }
 
 /*========================================*/
@@ -426,7 +425,8 @@ form>div {
 }
 .gallery-item {
     display: flex;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
+    height: 100%;
 }
 .gallery-image {
     max-width: 100%;
@@ -487,7 +487,7 @@ input {
     border-bottom: 4px solid var(--additional);
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     outline: none;
     width: 100%;
@@ -508,7 +508,7 @@ input {
     border-bottom: 4px solid var(--additional);
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     outline: none;
     width: 100%;
@@ -672,7 +672,7 @@ input[type="radio"]:checked~label {
 
 .scroll-box {
     height: 10vh;
-    width: 5px;	
+    width: 5px;
     background-color: var(--light);
 }
 .scroll-element {
@@ -730,9 +730,11 @@ input[type="radio"]:checked~label {
     text-decoration: none;
 }
 .underlined::after {
-    content: '';
+    content: "";
     position: absolute;
-    width: calc(100% + 50vw); /* Szerokość linii, możesz dostosować według potrzeb */
+    width: calc(
+        100% + 50vw
+    ); /* Szerokość linii, możesz dostosować według potrzeb */
     height: 2px; /* Grubość linii */
     background-color: var(--secondary); /* Kolor linii */
     bottom: 0px; /* Odległość linii od tekstu (możesz dostosować) */

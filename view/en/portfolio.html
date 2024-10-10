@@ -13,6 +13,12 @@
     <title>Kamil Urbanowski - Portfolio</title>
 
     <link rel="icon" href="https://eskamxd.github.io/icons/oryginal/logo-dark.png">
+
+    <!-- hreflang for SEO -->
+    <link rel="alternate" href="https://eskamxd.github.io/view/en/portfolio.html" hreflang="en" />
+    <link rel="alternate" href="https://eskamxd.github.io/view/pl/portfolio.html" hreflang="pl" />
+    <link rel="alternate" href="https://eskamxd.github.io/view/en/portfolio.html" hreflang="x-default" />
+    <link rel="canonical" href="https://eskamxd.github.io/view/en/portfolio.html" />
 </head>
 
 <body>
@@ -50,15 +56,12 @@
                     </ul>
                 </nav>
             </div>
+            <!-- Dropdown for language selection -->
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Language
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="https://eskamxd.github.io/view/pl/portfolio.html">Polish</a></li>
-                    <li><a class="dropdown-item" href="portfolio.html">English</a></li>
-                </ul>
+                <select id="language-switcher" class="form-select" onchange="changeLanguage()">
+                    <option value="en" selected>English</option>
+                    <option value="pl">Polski</option>
+                </select>
             </div>
         </div>
     </header>
@@ -81,82 +84,147 @@
     <!-- Portfolio -->
     <main class="content-row screen-height" style="border-radius: 15px;">
         <div class="content-column screen-width-60 gap-h-10" style="border-radius: 15px; padding: 20px 0;">
-            <div id="photoshop">
+            <div id="photoshop" class="mb-5">
                 <h3 class="dark underlined">Photoshop</h3>
-                <p>I think actions will speak louder than words in this case. Gallery:</p>
+                <p>Images will speak louder than words. Gallery:</p>
+
                 <div class="gallery">
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Konkursowe.webp" target="_blank"
-                            class="gallery-item"><img src="https://eskamxd.github.io/gallery/Konkursowe.webp" alt="Logo"
-                                class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Konkursowe.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Konkursowe.webp"
+                                alt="Competition project - Kamil Urbanowski" class="gallery-image" id="competition">
+                            <label style="color: black;" for="competition">Competition project</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp" target="_blank"
-                            class="gallery-item"><img
-                                src="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp" alt="Logo"
-                                class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Manipulacja otoczeniem.webp"
+                                alt="Environmental manipulation - Kamil Urbanowski" class="gallery-image"
+                                id="manipulation">
+                            <label style="color: black;" for="manipulation">Environmental manipulation</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Profilowe 4.webp" target="_blank"
-                            class="gallery-item"><img src="https://eskamxd.github.io/gallery/Profilowe 4.webp"
-                                alt="Logo" class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Profilowe 4.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Profilowe 4.webp"
+                                alt="Profile picture 4 - Kamil Urbanowski" class="gallery-image" id="profile-4">
+                            <label style="color: black;" for="profile-4">Profile picture</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp" target="_blank"
-                            class="gallery-item"><img
-                                src="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp" alt="Logo"
-                                class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/Profilowe (konkursowe).webp"
+                                alt="Profile (competition) - Kamil Urbanowski" class="gallery-image"
+                                id="profile-competition">
+                            <label style="color: black;" for="profile-competition">Profile (competition)</label>
+                        </a>
                     </div>
+
                     <div class="gallery-item">
-                        <a href="https://eskamxd.github.io/gallery/lab03.webp" target="_blank" class="gallery-item"><img
-                                src="https://eskamxd.github.io/gallery/lab03.webp" alt="Logo" class="gallery-image"></a>
+                        <a href="https://eskamxd.github.io/gallery/lab03.webp" data-toggle="lightbox"
+                            class="gallery-item d-flex flex-column">
+                            <img src="https://eskamxd.github.io/gallery/lab03.webp"
+                                alt="Laboratory project - Kamil Urbanowski" class="gallery-image" id="lab03">
+                            <label style="color: black;" for="lab03">Laboratory project</label>
+                        </a>
                     </div>
                 </div>
+                <p>
+                    *Thanks to the competition photos, I was recognized in the <a
+                        href="https://faktyoswiecim.pl/dzieje-sie/edukacja/kreatywni-2021-nagrodzeni-foto/">"Creative
+                        2021"</a>
+                    contest.
+                </p>
             </div>
-            <div id="html">
-                <h3 class="dark underlined" style="max-width:100%;">HTML</h3>
-                <p>I'm familiar with HTML because I use it to manage or modify websites. In fact, as you can see, this
-                    entire website is hand-written by me using HTML/CSS/JS.</p>
+
+
+            <div id="seo" class="mb-5">
+                <h3 class="dark underlined">SEO & Technical Optimization</h3>
+                <p>I specialize mainly in the technical aspects of SEO, such as optimizing site structure, improving
+                    loading speed,
+                    and conducting technical SEO audits. I focus less on content creation, instead prioritizing proper
+                    site
+                    indexing, managing redirects, and implementing SEO best practices for performance. My work on the <a
+                        class="dark" href="https://twojaprywatnosc.pl" target="_blank">twojaprywatnosc.pl</a> website
+                    resulted in a
+                    significant increase in organic traffic, particularly due to improvements in technical aspects of
+                    the site, as
+                    well as the implementation of content with carefully considered keywords and good content structure.
+                </p>
+                <p>Below is a comparison of the results for the <a class="dark" href="https://twojaprywatnosc.pl"
+                        target="_blank">twojaprywatnosc.pl</a> website over a 3-month period (between August 10 and
+                    October 10),
+                    showing the effects of the technical SEO improvements:</p>
+                <a href="https://eskamxd.github.io/images/webp-compression/poprawa-wyników-SEO.webp"
+                    data-toggle="lightbox" class="image-placeholder d-flex flex-column"
+                    style="width: 100%; height: 300px; background-color: #e0e0e0;">
+                    <img src="https://eskamxd.github.io/images/webp-compression/poprawa-wyników-SEO.webp"
+                        alt="SEO performance comparison" style="width: 100%; height: 100%; object-fit: cover;">
+                    <p>Screenshot of the results from Google Search Console</p>
             </div>
-            <div id="copywriting">
-                <h3 class="dark underlined">SEO & Copywriting</h3>
-                <p>Through managing websites, I've learned copywriting with a focus on SEO. I can create diverse texts
-                    with an emphasis on specific keywords and SEO, with little assistance. Headings, paragraphs, or
-                    bolded words are essential. Detailed alternative descriptions, internal links, graphics? Not every
-                    beginner may know about those. I'm self-taught, and my knowledge of the subject comes from managing
-                    website projects.</p>
-            </div>
-            <div id="coffeetime">
+        </div>
+
+        <div id="programming-studies" class="mb-5">
+            <h3 class="dark underlined">Programming during Studies</h3>
+            <p>During my studies, I developed several applications, focusing on web development using modern
+                technologies such
+                as React for front-end and Django for back-end. These projects helped me deepen my understanding of
+                full-stack
+                development and improve my skills in creating dynamic, responsive, and scalable applications.</p>
+
+            <div id="coffeetime" class="mb-5">
                 <h3 class="dark underlined">Coffeetime</h3>
                 <p>CoffeeTime is my original web application designed to connect people for coffee meetings. It was
-                    created for a project during my studies, but it's an extension of the idea for a café website in the
-                    dormitory. The application combines the basics of HTML/CSS/JS for front-end development and mainly
-                    PHP for back-end development. Users can choose a convenient time for a coffee meeting, and the
-                    system automatically matches them and assigns a time within their availability. The idea for it came
-                    to me while... drinking coffee.</p>
+                    initially
+                    created as part of a university project but later expanded from an idea for a café website in
+                    the dormitory.
+                    The application combines basic web technologies like HTML, CSS, and JavaScript, with PHP as the
+                    primary
+                    back-end language. Users can select convenient times for a coffee meeting, and the system
+                    automatically
+                    matches them and assigns a time within their availability. The idea came to me while... drinking
+                    coffee.</p>
                 <a class="btn btn-primary" href="https://github.com/EskamXD/CoffeeTime">View on GitHub</a>
             </div>
-            <div id="simple-blog-management-system">
-                <h3 class="dark underlined">Simple blog management system</h3>
-                <p>Simple blog management system is a desktop application written in Python. It is designed based on my
-                    preferences, which include creating applications that simplify life and automate work. The idea for
-                    it arose in me during a project where I was tasked with writing posts for a website to optimize
-                    keywords for SEO. I needed a tool that would allow me to easily control the content I had already
-                    written, create thumbnails for posts, and check their metadata to ensure they are of appropriate
-                    length. The application uses the tkinter library with the ttkbootstrap wrapper for displaying the
-                    window. It utilizes a couple of design patterns that I learned in one of my courses.</p>
+
+            <div id="simple-blog-management-system" class="mb-5">
+                <h3 class="dark underlined">Simple Blog Management System</h3>
+                <p>The Simple Blog Management System is a desktop application written in Python. It reflects my
+                    interest in
+                    creating tools that simplify tasks and automate work. The idea originated while working on a
+                    project
+                    involving writing posts for a website to optimize keywords for SEO. I needed a tool to easily
+                    manage the
+                    content I had already written, create thumbnails for posts, and check metadata for appropriate
+                    length. The
+                    application uses the Tkinter library with the ttkbootstrap wrapper for the GUI and implements a
+                    few design
+                    patterns I learned in one of my courses.</p>
                 <a class="btn btn-primary" href="https://github.com/EskamXD/simple-blog-management-system">View on
                     GitHub</a>
             </div>
-            <div id="receiptrover">
-                <h3 class="dark underlined">Receiptrover</h3>
-                <p>ReceiptRover is an OCR (Optical Character Recognition) application for scanning receipts and saving
-                    expenses with the ability to later analyze them. It was developed by me and a group of colleagues as
-                    a software engineering project. My main contribution to the application was creating the dynamic GUI
-                    (Graphical User Interface). Once again, I used the tkinter library along with ttkbootstrap, which I
-                    was already familiar with from a previous application.</p>
+
+            <div id="receiptrover" class="mb-5">
+                <h3 class="dark underlined">ReceiptRover</h3>
+                <p>ReceiptRover is an OCR (Optical Character Recognition) application for scanning receipts and
+                    recording
+                    expenses, with the option for later analysis. It was developed by me and a group of colleagues
+                    as part of a
+                    Software Engineering course project. My primary contribution was creating the dynamic GUI, once
+                    again using
+                    the Tkinter library along with ttkbootstrap, which I had become familiar with from previous
+                    projects.</p>
                 <a class="btn btn-primary" href="https://github.com/Nokrad997/ReceiptRover">View on GitHub</a>
             </div>
+        </div>
+
         </div>
     </main>
 
@@ -235,12 +303,43 @@
             document.getElementById('side-menu').checked = false;
         }
     </script>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language-switcher').value;
+            if (lang === 'pl') {
+                window.location.href = "https://eskamxd.github.io/view/pl/portfolio.html";
+            } else {
+                window.location.href = "https://eskamxd.github.io/view/en/portfolio.html";
+            }
+        }
+
+        // Funkcja, która ustawia odpowiedni język w dropdownie przy wczytaniu strony
+        window.onload = function () {
+            const currentUrl = window.location.href;
+            const langSwitcher = document.getElementById('language-switcher');
+
+            // Sprawdzamy URL, aby ustawić odpowiednią opcję jako wybraną
+            if (currentUrl.includes("/pl/")) {
+                langSwitcher.value = 'pl';
+            } else {
+                langSwitcher.value = 'en';
+            }
+
+            // Ustawienie menu na false po załadowaniu
+            document.getElementById('side-menu').checked = false;
+        };
+    </script>
+
     <script src="https://eskamxd.github.io/js.js"></script>
 
     <!-- Load bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="https://eskamxd.github.io/bootstrap/lightbox_bootrstrap.bundle.min.js"></script>
+    <script src="../../bootstrap/lightbox_bootrstrap.bundle.min.js"></script>
 
 </body>
 
