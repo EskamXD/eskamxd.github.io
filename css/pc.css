@@ -401,11 +401,7 @@ button.cancel {
 }
 .gallery-item {
     display: flex;
-    /* aspect-ratio: 1; */
     height: 100%;
-}
-.gallery-item a {
-    aspect-ratio: 1;
 }
 .gallery-image {
     max-width: 100%;

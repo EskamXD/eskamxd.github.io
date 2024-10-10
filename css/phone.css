@@ -425,7 +425,6 @@ form>div {
 }
 .gallery-item {
     display: flex;
-    /* aspect-ratio: 1; */
     height: 100%;
 }
 .gallery-image {
@@ -435,6 +434,7 @@ form>div {
     transition: 0.25s ease-out;
     border-radius: 15px;
     border: 1px solid var(--secondary);
+    aspect-ratio: 1;
 }
 
 .gap-h-2 {
