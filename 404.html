@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+        // Pobieramy aktualny URL, wyodrębniamy ścieżkę i przekierowujemy do index.html z odpowiednim hash
+        var pathname = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        // Przykładowa konwersja: /foo/bar => ?/foo/bar
+        var newUrl = window.location.origin + "/?" + pathname.substring(1) + search + hash;
+        window.location.replace(newUrl);
+    </script>
+</head>
+
+<body>
+    Redirecting...
+</body>
+
+</html>
